@@ -1,0 +1,14 @@
+@import "mixin";
+.menu-01 {
+    .titulo {
+        @include sub-2;
+        color: #fff;
+    }
+    .menu-top {
+        @include padding-lateral;
+        height: 40px;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: #ea5b0c;
+    }
+}

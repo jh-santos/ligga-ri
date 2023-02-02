@@ -1,0 +1,10 @@
+.modulo_01 {
+    @include padding;
+    background-color: red;
+    height: 50vh;
+    width: 100%;
+    .container-lg {
+        background-color: blue;
+        height: 100%;
+    }
+}

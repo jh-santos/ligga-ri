@@ -1,145 +1,152 @@
 @mixin res-full {
-    @media (max-width:1920px) {
+    @media (max-width: 1920px) {
         @content;
     }
 }
 
 @mixin res-hd-plus {
-    @media (max-width:1680px) {
+    @media (max-width: 1680px) {
         @content;
     }
 }
 
 @mixin res-hd {
-    @media (max-width:1500px) {
+    @media (max-width: 1500px) {
         @content;
     }
 }
 
 @mixin res-mac {
-    @media (max-width:1370px) {
+    @media (max-width: 1370px) {
         @content;
     }
 }
 
 @mixin res-xl {
-    @media (max-width:1281px) {
+    @media (max-width: 1281px) {
         @content;
     }
 }
 
 @mixin res-lg {
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
         @content;
     }
 }
 
 @mixin res-md {
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
 
 @mixin res-sm {
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
         @content;
     }
 }
 
 @mixin res-ios {
-    @media (max-width:420px) {
+    @media (max-width: 420px) {
         @content;
     }
 }
 
 @mixin res-mob {
-    @media (max-width:375px) {
+    @media (max-width: 375px) {
         @content;
     }
 }
 
 @mixin res-small {
-    @media (max-width:325px) {
+    @media (max-width: 350px) {
         @content;
     }
 }
 
 //  resoluções especificas
 @mixin res-1920x1080 {
-    @media (max-width:1921px) {
-        @media (max-height:1081px) {
+    @media (max-width: 1921px) {
+        @media (max-height: 1081px) {
             @content;
         }
     }
 }
 
 @mixin res-1680x1050 {
-    @media (max-width:1681px) {
-        @media (max-height:1051px) {
+    @media (max-width: 1681px) {
+        @media (max-height: 1051px) {
             @content;
         }
     }
 }
 
 @mixin res-1600x900 {
-    @media (max-width:1601px) {
-        @media (max-height:901px) {
+    @media (max-width: 1601px) {
+        @media (max-height: 901px) {
             @content;
         }
     }
 }
 
 @mixin res-1440x900 {
-    @media (max-width:1441px) {
-        @media (max-height:901px) {
+    @media (max-width: 1441px) {
+        @media (max-height: 901px) {
             @content;
         }
     }
 }
 
 @mixin res-1366x768 {
-    @media (max-width:1367px) {
-        @media (max-height:769px) {
+    @media (max-width: 1367px) {
+        @media (max-height: 769px) {
             @content;
         }
     }
 }
 
 @mixin res-1280x1024 {
-    @media (max-width:1281px) {
-        @media (max-height:1025px) {
+    @media (max-width: 1281px) {
+        @media (max-height: 1025px) {
             @content;
         }
     }
 }
 
 @mixin res-1280x800 {
-    @media (max-width:1281px) {
-        @media (max-height:801px) {
+    @media (max-width: 1281px) {
+        @media (max-height: 801px) {
+            @content;
+        }
+    }
+}
+@mixin res-1200x620 {
+    @media (max-width: 1201px) {
+        @media (max-height: 621px) {
             @content;
         }
     }
 }
 
 @mixin res-1024x768 {
-    @media (max-width:1025px) {
-        @media (max-height:769px) {
+    @media (max-width: 1025px) {
+        @media (max-height: 769px) {
             @content;
         }
     }
 }
 
 @mixin res-768x1024 {
-    @media (max-width:769px) {
-        @media (max-height:1025px) {
+    @media (max-width: 769px) {
+        @media (max-height: 1025px) {
             @content;
         }
     }
 }
 
-@mixin res-320x480 {
-    @media (max-width:321px) {
-        @media (max-height:481px) {
+@mixin res-360x640 {
+    @media (max-width: 360px) {
+        @media (max-height: 640px) {
             @content;
         }
     }
@@ -170,28 +177,129 @@ em regras de uso
 1680x1050 = 5.1%
 1600x900 = 3.8%
 */
-
-
-
-@mixin padding {
-    padding-top   : 4rem;
-    padding-bottom: 4rem;
-
+// definição de layout
+.container-lg {
+    max-width: 1270px;
+    @include res-xl {
+        max-width: 1140px;
+    }
     @include res-lg {
-        padding-top   : 3rem;
-        padding-bottom: 3rem;
+        max-width: 100%;
     }
 }
+$f1: "Avenir LT Std", sans-serif;
 
-.btn {
-    display        : flex;
+@mixin padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+@mixin padding-lateral {
+    padding-left: 46px;
+    padding-right: 46px;
+    @include res-md {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@mixin btn-1 {
+    font-family: $f1;
+    display: flex;
     justify-content: center;
-    align-items    : center;
-    border         : 1px solid #000;
-    transition     : .3s;
-    color          : #000;
-
+    align-items: center;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 500;
+    padding: 8px;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #ea5b0c;
+    transition: 0.2s;
     &:hover {
-        transition: .3s;
+        transition: 0.2s;
+        background-color: #db4a0c;
+    }
+}
+@mixin font-w {
+    font-family: $f1;
+    font-weight: 400;
+    &.f-500 {
+        font-weight: 500;
+    }
+    &.f-800 {
+        font-weight: 800;
+    }
+    &.f-900 {
+        font-weight: 900;
+    }
+}
+// conforme style guide
+@mixin titulo-1 {
+    @include font-w;
+    font-size: 56px;
+    line-height: 70px;
+}
+@mixin titulo-2 {
+    @include font-w;
+    font-size: 40px;
+    line-height: 55px;
+}
+@mixin titulo-3 {
+    @include font-w;
+    font-size: 20px;
+    line-height: 27px;
+}
+@mixin titulo-4 {
+    @include font-w;
+    font-size: 18px;
+    line-height: 25px;
+}
+@mixin sub-1 {
+    @include font-w;
+    font-size: 16px;
+    line-height: 22px;
+}
+@mixin sub-2 {
+    @include font-w;
+    font-size: 14px;
+    line-height: 19px;
+}
+@mixin sub-3 {
+    @include font-w;
+    font-size: 12px;
+    line-height: 16px;
+}
+// para conteudo
+@mixin conteudo {
+    font-family: $f1;
+    @content;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    strong {
+        @content;
+    }
+}
+@mixin conteudo-1 {
+    @include conteudo {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 23px;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 20px;
+            line-height: 27px;
+            margin-top: 32px;
+            font-weight: 800;
+            color: #000;
+        }
     }
 }
