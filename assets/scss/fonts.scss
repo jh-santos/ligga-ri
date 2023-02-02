@@ -1,16 +1,14 @@
 $f1: "Avenir LT Std", sans-serif;
 @font-face {
     font-family: "Avenir LT Std";
-    src: url("../assets/fonts/AvenirLTStd-Black.woff2") format("woff2"),
-        url("../assets/fonts/AvenirLTStd-Black.woff") format("woff");
+    src: url("../fonts/AvenirLTStd-Black.woff2") format("woff2"), url("../fonts/AvenirLTStd-Black.woff") format("woff");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: "Avenir LT Std";
-    src: url("../assets/fonts/AvenirLTStd-Heavy.woff2") format("woff2"),
-        url("../assets/fonts/AvenirLTStd-Heavy.woff") format("woff");
+    src: url("../fonts/AvenirLTStd-Heavy.woff2") format("woff2"), url("../fonts/AvenirLTStd-Heavy.woff") format("woff");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -18,8 +16,8 @@ $f1: "Avenir LT Std", sans-serif;
 
 @font-face {
     font-family: "Avenir LT Std";
-    src: url("../assets/fonts/AvenirLTStd-Medium.woff2") format("woff2"),
-        url("../assets/fonts/AvenirLTStd-Medium.woff") format("woff");
+    src: url("../fonts/AvenirLTStd-Medium.woff2") format("woff2"),
+        url("../fonts/AvenirLTStd-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -27,8 +25,7 @@ $f1: "Avenir LT Std", sans-serif;
 
 @font-face {
     font-family: "Avenir LT Std";
-    src: url("../assets/fonts/AvenirLTStd-Book.woff2") format("woff2"),
-        url("../assets/fonts/AvenirLTStd-Book.woff") format("woff");
+    src: url("../fonts/AvenirLTStd-Book.woff2") format("woff2"), url("../fonts/AvenirLTStd-Book.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;

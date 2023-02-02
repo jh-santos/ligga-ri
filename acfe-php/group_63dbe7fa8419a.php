@@ -4,7 +4,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_63dbe7fa8419a',
-	'title' => 'Geral',
+	'title' => 'GERAL',
 	'fields' => array(
 		array(
 			'key' => 'field_63dbe7fa2a8b8',
@@ -134,7 +134,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'geral' => 'GERAL',
 	),
-	'modified' => 1675356401,
+	'modified' => 1675364271,
 ));
 
 endif;

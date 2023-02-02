@@ -1,6 +1,6 @@
 {
     "key": "group_63dbe7fa8419a",
-    "title": "Geral",
+    "title": "GERAL",
     "fields": [
         {
             "key": "field_63dbe7fa2a8b8",
@@ -127,7 +127,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1675356401,
+    "modified": 1675364271,
     "acfe_categories": {
         "geral": "GERAL"
     }

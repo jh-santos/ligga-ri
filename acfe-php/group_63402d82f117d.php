@@ -4,7 +4,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_63402d82f117d',
-	'title' => '- Pagina - Post Type - Modelo Padrão',
+	'title' => '- PAGINA- POST TYPE - MODELO PADRÃO',
 	'fields' => array(
 		array(
 			'key' => 'field_6340348755e28',
@@ -218,7 +218,7 @@ acf_add_local_field_group(array(
 		'pagina' => 'PAGINA',
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1675356424,
+	'modified' => 1675364289,
 ));
 
 endif;

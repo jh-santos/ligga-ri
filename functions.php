@@ -112,7 +112,7 @@ function theme_styles()
     wp_enqueue_style('slick-css', get_template_directory_uri() . '/includes/slick/slick.css');
     wp_enqueue_style('lity-css', get_template_directory_uri() . '/assets/css/lity.min.css');
     // customs css project
-    wp_enqueue_style('menus-css', get_template_directory_uri() . '/assets/css/menus.min.css');
+    wp_enqueue_style('menus-css', get_template_directory_uri() . '/assets/css/menu_rodape.min.css');
     wp_enqueue_style('custom-components', get_template_directory_uri() . '/assets/css/custom-components.min.css');
 }
 add_action('wp_enqueue_scripts', 'theme_styles');

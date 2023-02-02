@@ -16,8 +16,11 @@
     while (have_posts()) : the_post(); ?>
         <main id="pagina_home_v1" class="pagina_home">
             <?php get_template_part('components/menu_01'); ?>
-            <?php get_template_part('components/modulo_01'); ?>
-
+            <?php if (have_rows('modulo_01')) : ?>
+                <?php while (have_rows('modulo_01')) : the_row(); ?>
+                    <?php get_template_part('components/modulo_01'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
 
             <?php get_template_part('components/rodape_01'); ?>
         </main>
