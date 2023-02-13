@@ -1,0 +1,106 @@
+.modulo_02 {
+    @include padding;
+    .titulo {
+        @include titulo-3;
+        color: #000;
+        margin-bottom: 25px;
+        @include res-md {
+            text-align: center;
+        }
+    }
+    .sub-1 {
+        @include sub-2;
+        color: #000;
+    }
+    .btn-1 {
+        @include btn-1;
+        width: 120px;
+    }
+    .grupo {
+        @include res-md {
+            @include padding-lateral;
+        }
+        &.grupo-1 {
+            border-right: 1px solid #c1bdbd;
+            @include res-md {
+                border: none;
+            }
+            .btn-1 {
+                @include res-md {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+        &.grupo-2 {
+            @include res-md {
+                @include padding;
+                background-color: #f3f3f3;
+            }
+        }
+        .grupo-lista {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 200px;
+            margin-bottom: 40px;
+            z-index: 5;
+            @include res-md {
+                height: auto;
+            }
+
+            .animacao {
+                position: absolute;
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                z-index: 5;
+                opacity: 1;
+                transition: 0.2s;
+                .load {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            &.transicao {
+                .animacao {
+                    animation: mod-2-1 1 0.2s;
+                    opacity: 0;
+                    @keyframes mod-2-1 {
+                        0% {
+                            opacity: 1;
+                            z-index: 5;
+                        }
+                        90% {
+                            opacity: 0;
+                            z-index: 5;
+                        }
+                        10% {
+                            opacity: 0;
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            &.desativado {
+                .animacao {
+                    opacity: 0;
+                    z-index: 0;
+                }
+            }
+        }
+
+        .item {
+            border-left: 2px solid #ea5b0c;
+            padding-left: 8px;
+            margin-bottom: 25px;
+            @include res-md {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -10,8 +10,6 @@
  */
 ?>
 <?php get_template_part('config/header_default'); ?>
-
-
 <?php if (have_posts()) :
     while (have_posts()) : the_post(); ?>
         <main id="pagina_home_v1" class="pagina_home">
@@ -21,7 +19,12 @@
                     <?php get_template_part('components/modulo_01'); ?>
                 <?php endwhile; ?>
             <?php endif; ?>
-
+            <?php if (have_rows('modulo_02')) : ?>
+                <?php while (have_rows('modulo_02')) : the_row(); ?>
+                    <?php get_template_part('components/modulo_02'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <?php get_template_part('components/modulo_03'); ?>
             <?php get_template_part('components/rodape_01'); ?>
         </main>
     <?php endwhile ?>

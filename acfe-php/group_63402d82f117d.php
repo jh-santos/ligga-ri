@@ -134,7 +134,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_635f3ce13c7bb',
-			'label' => 'Footer',
+			'label' => 'DEV',
 			'name' => '',
 			'aria-label' => '',
 			'type' => 'tab',
@@ -148,6 +148,29 @@ acf_add_local_field_group(array(
 			),
 			'placement' => 'left',
 			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_63e15b6a895bc',
+			'label' => 'Header da Pagina',
+			'name' => 'header_pagina',
+			'aria-label' => '',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+			),
+			'default_value' => '',
+			'return_format' => 'value',
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'layout' => 'vertical',
+			'save_other_choice' => 0,
 		),
 		array(
 			'key' => 'field_635f3ceb3c7bc',
@@ -218,7 +241,7 @@ acf_add_local_field_group(array(
 		'pagina' => 'PAGINA',
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1675364289,
+	'modified' => 1675714416,
 ));
 
 endif;

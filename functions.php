@@ -209,7 +209,7 @@ function wpmidia_custom_dashboard_help()
 function remove_menus()
 {
 
-    //remove_menu_page('edit.php'); //Posts
+    remove_menu_page('edit.php'); //Posts
     remove_menu_page('edit-comments.php'); //Comments
     //remove_menu_page('themepunch-google-fonts');
     //remove_menu_page('edit.php?post_type=acf-field-group');

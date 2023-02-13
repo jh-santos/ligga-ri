@@ -178,6 +178,25 @@ em regras de uso
 1600x900 = 3.8%
 */
 // definição de layout
+
+$f1: "Avenir LT Std", sans-serif;
+
+@mixin padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    @include res-md {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+@mixin padding-lateral {
+    padding-left: 46px;
+    padding-right: 46px;
+    @include res-md {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
 .container-lg {
     max-width: 1270px;
     @include res-xl {
@@ -185,20 +204,6 @@ em regras de uso
     }
     @include res-lg {
         max-width: 100%;
-    }
-}
-$f1: "Avenir LT Std", sans-serif;
-
-@mixin padding {
-    padding-top: 56px;
-    padding-bottom: 56px;
-}
-@mixin padding-lateral {
-    padding-left: 46px;
-    padding-right: 46px;
-    @include res-md {
-        padding-left: 20px;
-        padding-right: 20px;
     }
 }
 @mixin btn-1 {
@@ -210,9 +215,10 @@ $f1: "Avenir LT Std", sans-serif;
     line-height: 19px;
     font-weight: 500;
     padding: 8px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #fff;
     background-color: #ea5b0c;
+    border-radius: 5px;
     transition: 0.2s;
     &:hover {
         transition: 0.2s;
@@ -242,6 +248,10 @@ $f1: "Avenir LT Std", sans-serif;
     @include font-w;
     font-size: 40px;
     line-height: 55px;
+    @include res-md {
+        font-size: 24px;
+        line-height: 33px;
+    }
 }
 @mixin titulo-3 {
     @include font-w;

@@ -39,6 +39,9 @@
             width: 0;
             background-color: #ea5b0c;
             transition: linear;
+            @include res-md {
+                height: 3px;
+            }
         }
         &.ativo {
             &:after {

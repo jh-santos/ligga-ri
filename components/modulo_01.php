@@ -17,13 +17,13 @@
                         <?php endwhile; ?>
                     <?php } else { ?>
                         <div class="item">
-                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo-01-1.webp' alt='' srcset=''></figure>
+                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
                         </div>
                         <div class="item">
-                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo-01-1.webp' alt='' srcset=''></figure>
+                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
                         </div>
                         <div class="item">
-                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo-01-1.webp' alt='' srcset=''></figure>
+                            <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
                         </div>
                     <?php }; ?>
                 </div>
@@ -33,7 +33,7 @@
 </section>
 <style>
     .modulo_01 .slick-1 .item.ativo:after {
-        transition-duration: 2.5s;
+        transition-duration: 3s;
     }
 </style>
 <script async>
@@ -46,7 +46,7 @@
             dots: true,
             autoplay: true,
             speed: 300,
-            autoplaySpeed: 2500,
+            autoplaySpeed: 3000,
             cssEase: 'linear',
             pauseOnFocus: false,
             pauseOnHover: false,

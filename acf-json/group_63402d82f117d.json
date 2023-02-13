@@ -130,7 +130,7 @@
         },
         {
             "key": "field_635f3ce13c7bb",
-            "label": "Footer",
+            "label": "DEV",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -144,6 +144,28 @@
             },
             "placement": "left",
             "endpoint": 0
+        },
+        {
+            "key": "field_63e15b6a895bc",
+            "label": "Header da Pagina",
+            "name": "header_pagina",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         },
         {
             "key": "field_635f3ceb3c7bc",
@@ -208,7 +230,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1675364289,
+    "modified": 1675714416,
     "acfe_categories": {
         "geral": "GERAL",
         "lp": "LP",

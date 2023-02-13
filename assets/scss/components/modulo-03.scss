@@ -1,0 +1,6 @@
+.modulo_03 {
+    @include padding;
+    &.bg_color {
+        background-color: #f3f3f3;
+    }
+}
