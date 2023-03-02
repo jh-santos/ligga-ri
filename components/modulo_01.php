@@ -45,6 +45,7 @@
             arrows: false,
             dots: true,
             autoplay: true,
+            fade: true,
             speed: 300,
             autoplaySpeed: 3000,
             cssEase: 'linear',

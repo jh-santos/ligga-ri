@@ -1,5 +1,19 @@
-
 // MUDANÇAS NAS PAGINAS ESPECIFICAS
-#home {}
-#contato{}
-#sobre {}
+#home {
+}
+#pagina_sobre_v1 {
+    .menu {
+        .menu-central {
+            position: relative;
+            background-color: #ea5b0c;
+            padding-bottom: 16px;
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+#contato {
+}
+#sobre {
+}

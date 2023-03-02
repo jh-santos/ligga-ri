@@ -1,0 +1,31 @@
+.modulo_04 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include res-md {
+        align-items: flex-end;
+    }
+    .bloco {
+        @include padding-lateral;
+        position: absolute;
+        @include res-md {
+            margin-bottom: 48px;
+        }
+    }
+    .titulo-1 {
+        @include titulo-1;
+        color: #fff;
+    }
+    .titulo-2 {
+        @include sub-1;
+        color: #fff;
+    }
+    .item-1 {
+        .titulo-1 {
+            margin-bottom: 24px;
+            @include res-md {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

@@ -30,6 +30,8 @@
         overflow: hidden;
         @media (min-width: 1366px) {
             height: 80vh;
+            display: flex;
+            align-items: flex-start;
         }
         &:after {
             content: "";

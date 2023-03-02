@@ -16,6 +16,9 @@
     while (have_posts()) : the_post(); ?>
         <main id="pagina_sobre_v1" class="pagina_sobre">
             <?php get_template_part('components/menu_01'); ?>
+            <?php get_template_part('components/modulo_04'); ?>
+            <?php get_template_part('components/modulo_05'); ?>
+            <?php get_template_part('components/modulo_06'); ?>
 
 
             <?php get_template_part('components/rodape_01'); ?>

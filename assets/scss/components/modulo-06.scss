@@ -1,0 +1,30 @@
+.modulo_06 {
+    @include padding;
+    @include padding-lateral;
+    position: relative;
+    .titulo-1 {
+        @include titulo-2;
+        color: #000;
+    }
+    .titulo-2 {
+        @include titulo-3;
+        color: #ea5b0c;
+    }
+    .sub-1 {
+        @include sub-1;
+        color: #000;
+    }
+    .bloco-2 {
+        .item {
+            margin-bottom: 40px;
+            .titulo-2 {
+                margin-bottom: 12px;
+            }
+        }
+        .col-md-4:nth-child(3n) {
+            .item {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

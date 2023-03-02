@@ -149,10 +149,9 @@ function custom_dashboard_help()
  * Thumbs Imagens
  *
  * */
+// desabilitar tumbs para gerar varias imagens
+add_filter('intermediate_image_sizes', '__return_empty_array');
 add_theme_support('post-thumbnails');
-add_image_size('450x300', 450, 300, true);
-add_image_size('300x300', 200, 200, true);
-
 /**
  *
  * @João Henrique

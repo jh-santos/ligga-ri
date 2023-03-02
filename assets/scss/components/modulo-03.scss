@@ -1,6 +1,42 @@
 .modulo_03 {
     @include padding;
+    position: relative;
+    overflow: hidden;
     &.bg_color {
         background-color: #f3f3f3;
+        @include res-md {
+            background-color: transparent;
+        }
+    }
+    .titulo {
+        @include titulo-2;
+        color: #000;
+    }
+    .conteudo {
+        @include conteudo {
+            @include sub-1;
+            color: #000;
+            margin-bottom: 20px;
+        }
+    }
+    .container-fluid {
+        position: relative;
+        @include res-mac {
+            max-width: 1270px;
+        }
+    }
+    .bloco-1 {
+        @media (min-width: 1367px) {
+            width: 604px;
+        }
+        @include res-hd {
+            width: 603px;
+        }
+        @include res-xl {
+            width: 539px;
+        }
+        @include res-lg {
+            width: auto;
+        }
     }
 }

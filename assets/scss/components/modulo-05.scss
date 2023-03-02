@@ -1,0 +1,49 @@
+.modulo_05 {
+    position: relative;
+    @include padding;
+    @include padding-lateral;
+    .titulo-1,
+    .titulo-1 span {
+        @include titulo-2;
+        color: #ea5b0c;
+        @include res-md {
+            @include titulo-1;
+        }
+    }
+    .sub-1 {
+        @include sub-1;
+        color: #000;
+    }
+    .conteudo {
+        @include conteudo {
+            @include sub-1;
+            color: #000;
+            margin-bottom: 20px;
+        }
+    }
+    .bloco {
+        .item {
+            margin-bottom: 32px;
+            .titulo-1 {
+                margin-bottom: 5px;
+                @include res-md {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .bloco-1 {
+        @include res-xl {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item {
+            @include res-xl {
+                padding-right: 32px;
+            }
+            @include res-md {
+                width: 100%;
+            }
+        }
+    }
+}

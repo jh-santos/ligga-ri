@@ -243,6 +243,10 @@ $f1: "Avenir LT Std", sans-serif;
     @include font-w;
     font-size: 56px;
     line-height: 70px;
+    @include res-md {
+        font-size: 40px;
+        line-height: 56px;
+    }
 }
 @mixin titulo-2 {
     @include font-w;
