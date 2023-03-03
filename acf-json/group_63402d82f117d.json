@@ -129,6 +129,30 @@
             "return_entities": 0
         },
         {
+            "key": "field_64022aed7b877",
+            "label": "TAG H1",
+            "name": "tag_h1",
+            "aria-label": "",
+            "type": "acfe_code_editor",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "insira o conteudo da tag H1",
+            "mode": "text\/html",
+            "lines": 1,
+            "indent_unit": 4,
+            "maxlength": "",
+            "rows": 4,
+            "max_rows": "",
+            "return_entities": 0
+        },
+        {
             "key": "field_635f3ce13c7bb",
             "label": "DEV",
             "name": "",
@@ -146,28 +170,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_63e15b6a895bc",
-            "label": "Header da Pagina",
-            "name": "header_pagina",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": [],
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_635f3ceb3c7bc",
             "label": "Jquery - Document Ready - Footer",
             "name": "jquery_custom_footer",
@@ -182,7 +184,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "\/\/ Usar Jquery, função executada depois de todo carregamento do site ...",
+            "placeholder": "\/\/ Usar Jquery, função executada depois do carregamento da pagina ...",
             "mode": "javascript",
             "lines": 1,
             "indent_unit": 4,
@@ -230,7 +232,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1675714416,
+    "modified": 1677868547,
     "acfe_categories": {
         "geral": "GERAL",
         "lp": "LP",

@@ -4,15 +4,15 @@
             <div class='col-xl-4 px-0'>
                 <div class="bloco bloco-1">
                     <div class="item item-1">
-                        <h2 class="titulo-1 f-500"><span>46</span> %</h2>
+                        <h2 class="titulo-1 f-500"><span class="f-500">46</span> <span class="f-500">%</span></h2>
                         <h3 class="sub-1">de abrangência no mercado nacional.</h3>
                     </div>
                     <div class="item item-2">
-                        <h2 class="titulo-1 f-500"><span>19</span> mil clientes</h2>
+                        <h2 class="titulo-1 f-500"><span class="f-500">19</span> <span class="f-500">mil clientes</span></h2>
                         <h3 class="sub-1">em todo estado do Paraná</h3>
                     </div>
                     <div class="item item-3">
-                        <h2 class="titulo-1 f-500"><span>3.5</span> mil</h2>
+                        <h2 class="titulo-1 f-500"><span class="f-500">3.5</span> <span class="f-500">mil</span></h2>
                         <h3 class="sub-1">clientes corporativos</h3>
                     </div>
                 </div>
@@ -32,8 +32,3 @@
     </div>
 
 </section>
-<script async>
-    window.addEventListener('load', function() {
-
-    });
-</script>

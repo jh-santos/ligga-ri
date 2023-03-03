@@ -2,6 +2,9 @@
     @include padding;
     @include padding-lateral;
     position: relative;
+    &.bg_color {
+        background-color: #f3f3f3;
+    }
     .titulo-1 {
         @include titulo-2;
         color: #000;
@@ -14,11 +17,31 @@
         @include sub-1;
         color: #000;
     }
+    .bloco-1 {
+        .titulo-1 {
+            width: 70%;
+            @include res-mac {
+                width: auto;
+            }
+            @include res-md {
+                margin-bottom: 24px;
+            }
+        }
+    }
     .bloco-2 {
         .item {
             margin-bottom: 40px;
             .titulo-2 {
                 margin-bottom: 12px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &:before {
+                    content: url("../img/icone-traco.svg");
+                    display: flex;
+                    align-items: center;
+                    margin-right: 5px;
+                }
             }
         }
         .col-md-4:nth-child(3n) {

@@ -1,12 +1,12 @@
 <?php
 /*
-/ Template Name: Pagina Sobre v1
+/ Template Name: Pagina Soluções v1
 */
 
 /**
  * @author [João Henrique]
  * @email [joaohenrique@jobspace.com.br]
- * @desc [Pagina Sobre v1]
+ * @desc [Pagina Soluções v1]
  */
 ?>
 <?php get_template_part('config/header_default'); ?>
@@ -14,11 +14,11 @@
 
 <?php if (have_posts()) :
     while (have_posts()) : the_post(); ?>
-        <main id="pagina_sobre_v1" class="pagina_sobre">
+        <main id="pagina_solucoes_v1" class="pagina_solucoes">
             <?php get_template_part('components/menu_01'); ?>
-            <?php get_template_part('components/modulo_04'); ?>
-            <?php get_template_part('components/modulo_05'); ?>
-            <?php get_template_part('components/modulo_06'); ?>
+            <?php get_template_part('components/modulo_07'); ?>
+            <?php get_template_part('components/modulo_03'); ?>
+            <?php get_template_part('components/modulo_08'); ?>
 
 
             <?php get_template_part('components/rodape_01'); ?>
@@ -29,7 +29,8 @@
 <!-- por definição use o script dentro de cada modulo com async -->
 <script async>
     $(document).ready(function() {
-        $('.menu').addClass('versao-2')
+        $('.menu').addClass('versao-2');
+        $('.modulo_03').removeClass('bg_color');
     });
     window.addEventListener('load', function() {
 

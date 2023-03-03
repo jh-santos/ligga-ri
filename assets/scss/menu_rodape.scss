@@ -207,6 +207,16 @@
             }
         }
     }
+    &.versao-2 {
+        .menu-central {
+            position: relative;
+            background-color: #ea5b0c;
+            padding-bottom: 16px;
+            &:after {
+                content: none;
+            }
+        }
+    }
 }
 .rodape_01 {
     background-color: #1a1a1a;

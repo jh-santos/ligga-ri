@@ -20,13 +20,13 @@
                 <a href="javascript:void(0)" class="sub-1 text-nowrap">A Ligga</a>
                 <div class="drop-container">
                     <div class="drop-item">
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/pagina-sobre">Sobre Nós</a>
-                        <a class="sub-2 f-500 text-nowrap" href="">Soluções</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/sobre-nos">Sobre Nós</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/solucoes">Soluções</a>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <a href="" class="sub-1 text-nowrap">Governança Corporativa</a>
+                <a href="<?php echo home_url(); ?>/governanca-corporativa/" class="sub-1 text-nowrap">Governança Corporativa</a>
             </div>
             <div class="item drop">
                 <a href="javascript:void(0)" class="sub-1 text-nowrap">Informações Financeiras</a>
@@ -73,6 +73,13 @@
         </div>
     </div>
 </header>
+<h1 hidden style="opacity: 0;width:0;height:0;">
+    <?php if (get_field('tag_h1')) {; ?>
+        <?php the_field('tag_h1'); ?>
+    <?php } else { ?>
+        <?php the_title(); ?>
+    <?php }; ?>
+</h1>
 <script async>
     $(document).ready(function() {
         $('.menu_01 .bloco-2 .drop').on('click', function() {

@@ -21,8 +21,3 @@
         </div>
     </div>
 </section>
-<script async>
-    window.addEventListener('load', function() {
-
-    });
-</script>

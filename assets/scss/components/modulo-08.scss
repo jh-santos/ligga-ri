@@ -1,0 +1,60 @@
+.modulo_08 {
+    position: relative;
+    overflow: hidden;
+    @include padding;
+    @include padding-lateral;
+    &.bg_color {
+        background-color: #f3f3f3;
+    }
+    .titulo-1 {
+        @include titulo-2;
+        color: #000;
+    }
+    .titulo-2 {
+        @include sub-1;
+        color: #000;
+    }
+    .titulo-3 {
+        @include titulo-3;
+        color: #000;
+    }
+    .sub-1 {
+        @include sub-1;
+        color: #000;
+    }
+    .bloco-1 {
+        .titulo-1 {
+            max-width: 400px;
+            @include res-md {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    .bloco-3 {
+        margin-top: 40px;
+        @include res-md {
+            margin-right: -24px;
+        }
+        .slick-1 {
+            .slick-dots {
+                bottom: 0;
+                margin-top: 12px;
+                position: relative;
+                @include dots-2;
+            }
+            .item {
+                padding: 40px 20px;
+                background-color: #fff;
+                margin-right: 24px;
+                text-align: center;
+                @include res-md {
+                    width: 300px;
+                    margin-right: 12px;
+                }
+                .titulo-3 {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

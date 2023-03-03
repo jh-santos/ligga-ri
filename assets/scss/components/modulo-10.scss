@@ -1,0 +1,52 @@
+.modulo_10 {
+    position: relative;
+    @include padding;
+    @include padding-lateral;
+    .titulo {
+        @include titulo-3;
+        color: #7a7575;
+    }
+    .bloco-1 {
+        display: flex;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #969696;
+        .item {
+            padding-bottom: 8px;
+            margin-right: 24px;
+            &.titulo {
+                border-bottom: 2px solid transparent;
+                transition: 0.2s;
+                position: relative;
+                margin-bottom: -1px;
+                &.ativo {
+                    color: #ea5b0c;
+                    border-color: #ea5b0c;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+    .bloco-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        position: relative;
+        overflow: hidden;
+        margin: 0 -12px;
+        transition: 0.2s;
+        height: 0;
+        .item {
+            width: 23%;
+            @include res-mac {
+            }
+            margin-bottom: 24px;
+            display: none;
+            position: absolute;
+            margin: 12px;
+            &.ativo {
+                display: block;
+                position: relative;
+            }
+        }
+    }
+}

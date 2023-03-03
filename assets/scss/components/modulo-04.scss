@@ -23,7 +23,9 @@
     .item-1 {
         .titulo-1 {
             margin-bottom: 24px;
+            white-space: nowrap;
             @include res-md {
+                white-space: normal;
                 margin-bottom: 12px;
             }
         }

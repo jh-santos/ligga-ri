@@ -9,8 +9,8 @@
                             <?php $img_mobile = get_sub_field('img_mobile'); ?>
                             <div class="item">
                                 <picture class="w-100">
-                                    <source media='(min-width:992px)' srcset='<?php echo esc_url($img_desktop['url']); ?>'>
-                                    <source media='(max-width:991px)' srcset='<?php echo esc_url($img_mobile['url']); ?>'>
+                                    <source media='(min-width:769px)' srcset='<?php echo esc_url($img_desktop['url']); ?>'>
+                                    <source media='(max-width:768px)' srcset='<?php echo esc_url($img_mobile['url']); ?>'>
                                     <img loading='lazy' class='img-fluid w-100' src='' alt='<?php echo esc_attr($img_desktop['alt']); ?>'>
                                 </picture>
                             </div>
@@ -59,8 +59,5 @@
             $('.modulo_01 .slick-1 .item[data-slick-index="' + currentSlide + '"]').addClass('ativo');
             // console.log($('.modulo_01 .slick-1 .item[data-slick-index="' + currentSlide + '"]'));
         });
-    });
-    window.addEventListener('load', function() {
-
     });
 </script>

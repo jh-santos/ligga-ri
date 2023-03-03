@@ -19,6 +19,13 @@
             margin-bottom: 20px;
         }
     }
+    .sub-1 {
+        @include sub-2;
+        color: #000;
+    }
+    .btn-1 {
+        @include btn-2;
+    }
     .container-fluid {
         position: relative;
         @include res-mac {
@@ -37,6 +44,20 @@
         }
         @include res-lg {
             width: auto;
+        }
+        .arquivo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            .icone {
+                margin-left: 10px;
+            }
+            .sub-1 {
+                text-decoration: underline;
+            }
+        }
+        .btn-1 {
+            margin-bottom: 24px;
         }
     }
 }
