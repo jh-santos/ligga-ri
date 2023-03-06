@@ -1,15 +1,38 @@
 .modulo_10 {
     position: relative;
+    overflow: hidden;
     @include padding;
+    padding-bottom: 24px;
     @include padding-lateral;
+    @include res-md {
+        padding-right: 0;
+    }
     .titulo {
         @include titulo-3;
         color: #7a7575;
     }
+    .titulo-2 {
+        @include titulo-4;
+        color: #000;
+        @include res-md {
+            @include sub-2;
+        }
+    }
+    .sub-1 {
+        @include sub-1;
+        color: #000;
+        @include res-md {
+            @include sub-2;
+        }
+    }
     .bloco-1 {
         display: flex;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
         border-bottom: 1px solid #969696;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: start;
         .item {
             padding-bottom: 8px;
             margin-right: 24px;
@@ -26,27 +49,46 @@
             }
         }
     }
+
     .bloco-2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         position: relative;
         overflow: hidden;
-        margin: 0 -12px;
-        transition: 0.2s;
         height: 0;
+        width: 100%;
         .item {
-            width: 23%;
-            @include res-mac {
-            }
-            margin-bottom: 24px;
-            display: none;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            transition: 0.2s;
+            opacity: 0;
+            pointer-events: none;
             position: absolute;
-            margin: 12px;
-            &.ativo {
-                display: block;
-                position: relative;
+            margin: 0 auto;
+            .colab {
+                margin: 12px 24px 24px 0px;
+                width: 23%;
+                @include res-hd-plus {
+                    max-width: 300px;
+                }
+                @include res-md {
+                    width: 40%;
+                }
+                .titulo-2 {
+                    margin: 16px 0 4px;
+                }
             }
+            &.ativo {
+                pointer-events: auto;
+                opacity: 1;
+                transition: 0.2s;
+            }
+        }
+        .item.ativo:last-child .colab {
+            margin-right: auto;
         }
     }
 }
