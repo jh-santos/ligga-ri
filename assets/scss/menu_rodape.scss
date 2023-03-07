@@ -1,6 +1,17 @@
 @import "mixin";
 .menu_01 {
     position: relative;
+    .overlay {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 0;
+        z-index: 1;
+        &.ativo {
+            height: 100vh;
+        }
+    }
     .titulo {
         @include sub-2;
         color: #fff;
@@ -39,6 +50,7 @@
         flex-wrap: wrap;
         @include padding-lateral;
         background-color: transparent;
+
         @include res-md {
             // somente ate fazer a versao mobile e menu
             display: none;
@@ -61,9 +73,10 @@
         }
         .bloco-1 {
             margin-right: auto;
+            position: relative;
+            z-index: 5;
         }
         .bloco-2 {
-            position: relative;
             display: flex;
             align-items: center;
             .sub-2 {
@@ -86,6 +99,7 @@
                 margin-right: 24px;
                 cursor: pointer;
                 position: relative;
+                z-index: 2;
                 &.drop {
                     display: flex;
                     align-items: center;
@@ -144,7 +158,6 @@
             }
         }
         .bloco-3 {
-            position: relative;
             display: flex;
             align-items: center;
             .busca {

@@ -1,0 +1,130 @@
+.modulo_13 {
+    position: relative;
+    @include padding;
+    @include padding-lateral;
+    .titulo-1 {
+        @include titulo-2;
+        color: #000;
+    }
+    .titulo-2 {
+        @include sub-1;
+        color: #000;
+    }
+    .bloco-1 {
+        .titulo-1 {
+            margin-bottom: 12px;
+        }
+        .titulo-2 {
+            margin-bottom: 12px;
+        }
+        .sub-1 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &:before {
+                content: url("../img/icone-mail.svg");
+                margin-right: 5px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .bloco-2 {
+        .formulario {
+            position: relative;
+            .form-input {
+                border: 2px solid #000;
+                padding: 10px 16px;
+                padding-right: 45px;
+                border-radius: 4px;
+                @include sub-1;
+                color: #000;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+            }
+            .form-close {
+                cursor: pointer;
+                transform-origin: center;
+                transform: rotate(0deg);
+                z-index: 3;
+
+                svg path {
+                    transition: 0.2s;
+                }
+            }
+            .btn-1 {
+                @include btn-1;
+            }
+
+            .form-label {
+                background-color: #fff;
+                @include sub-1;
+            }
+            .form-grupo {
+                position: relative;
+                margin-bottom: 24px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .form-label {
+                    position: absolute;
+                    z-index: 2;
+                    left: 16px;
+                    transition: 0.1s;
+                    top: 10px;
+                    padding: 0 3px;
+                    width: 90%;
+                }
+                .form-close {
+                    right: 0;
+                    z-index: 2;
+                    position: absolute;
+                    transition: 0.1s;
+                    padding: 0 3px;
+                    opacity: 0;
+                }
+                .form-close:hover {
+                    transition: 0.2s;
+                    transform: rotate(180deg);
+                    svg path {
+                        transition: 0.2s;
+                        fill: #ea5b0c;
+                    }
+                }
+                .form-close.ativo {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+                .form-input:invalid {
+                    border-color: red;
+                }
+                .form-input:invalid + .form-label {
+                    color: red;
+                }
+                .form-input.nao-visitado {
+                    border-color: #000;
+                }
+                .form-input.nao-visitado + .form-label {
+                    color: #000;
+                }
+                select.form-input {
+                    background-color: #fff;
+                }
+                textarea.form-input {
+                    height: 150px;
+                    resize: none;
+                }
+                input.form-input:focus + .form-label,
+                input.form-input:valid + .form-label,
+                textarea.form-input:focus + .form-label,
+                textarea.form-input:valid + .form-label {
+                    top: -7px;
+                    font-size: 12px;
+                    line-height: 14px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

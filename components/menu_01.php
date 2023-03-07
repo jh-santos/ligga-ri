@@ -29,22 +29,26 @@
                 <a href="<?php echo home_url(); ?>/governanca-corporativa/" class="sub-1 text-nowrap">Governança Corporativa</a>
             </div>
             <div class="item drop">
+                <a href="javascript:void(0)" class="sub-1 text-nowrap">Relatórios e Comunicados</a>
+                <div class="drop-container">
+                    <div class="drop-item">
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/assembleias-e-reunioes">Assembleias e Reuniões</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/comunicados-societarios">Comunicados Societários</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/relatorios-da-administracao">Relatórios da Administração</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item drop">
                 <a href="javascript:void(0)" class="sub-1 text-nowrap">Informações Financeiras</a>
                 <div class="drop-container">
                     <div class="drop-item">
-                        <a class="sub-2 f-500 text-nowrap" href="">Sobre Nós</a>
-                        <a class="sub-2 f-500 text-nowrap" href="">Soluções</a>
-                        <a class="sub-2 f-500 text-nowrap" href="">Soluções</a>
-                        <a class="sub-2 f-500 text-nowrap" href="">Informações Financeiras</a>
-                        <a class="sub-2 f-500 text-nowrap" href="">Soluções</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/central-de-resultados">Central de Resultados</a>
+                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/emissoes-de-divida">Emissões de Dívida</a>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <a href="" class="sub-1 text-nowrap">ESG</a>
-            </div>
-            <div class="item">
-                <a href="" class="sub-1 text-nowrap">Serviços ao Investidor</a>
+                <a href="<?php echo home_url(); ?>/servicos-ao-investidor" class="sub-1 text-nowrap">Serviços ao Investidor</a>
             </div>
         </div>
         <div class="bloco bloco-3">
@@ -71,7 +75,9 @@
                 </div>
             </div>
         </div>
+        <div class="overlay"></div>
     </div>
+
 </header>
 <h1 hidden style="opacity: 0;width:0;height:0;">
     <?php if (get_field('tag_h1')) {; ?>
@@ -90,22 +96,36 @@
                 $('.menu_01 .bloco-2 .drop').removeClass('ativo');
                 temp.find('.drop-container').css('height', temp1);
                 temp.addClass('ativo');
+                $('.menu_01 .overlay').addClass('ativo');
             } else {
                 $('.menu_01 .bloco-2 .drop-container').css('height', '0');
                 $('.menu_01 .bloco-2 .drop').removeClass('ativo');
+                $('.menu_01 .overlay').removeClass('ativo');
             }
         });
+        $('.menu_01 .overlay').on('click', function() {
+            $('.menu_01 .bloco-2 .drop-container').css('height', '0');
+            $('.menu_01 .bloco-2 .drop').removeClass('ativo');
+            $('.menu_01 .overlay').removeClass('ativo');
+            // retira ativa se opcional
+            $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
+            $('.menu_01 .bloco-2').removeClass('disabled');
+            $('.menu_01 .bloco-3 .grupo-1').removeClass('ativo');
+        })
         $('.menu_01 .bloco-3 .btn-2').on('click', function() {
+
             var temp = $(this).attr('busca');
             if (temp == 'open') {
                 $('.menu_01 .bloco-2').addClass('disabled');
                 $('.menu_01 .bloco-3 .grupo-1').addClass('ativo');
                 $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
                 $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').focus();
+                $('.menu_01 .overlay').addClass('ativo');
             } else if (temp == 'close') {
                 $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
                 $('.menu_01 .bloco-2').removeClass('disabled');
                 $('.menu_01 .bloco-3 .grupo-1').removeClass('ativo');
+                $('.menu_01 .overlay').removeClass('ativo');
             }
 
         });

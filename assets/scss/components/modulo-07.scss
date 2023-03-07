@@ -9,7 +9,7 @@
         @include sub-1;
         color: #fff;
     }
-    .bloco-1 {
+    .bloco {
         position: absolute;
         max-width: 570px;
         margin: 0 auto;
@@ -18,6 +18,12 @@
         }
         .titulo-1 {
             margin-bottom: 12px;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            @include res-md {
+                white-space: normal;
+            }
         }
     }
 }

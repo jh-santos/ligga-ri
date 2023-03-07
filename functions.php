@@ -150,6 +150,7 @@ function custom_dashboard_help()
  *
  * */
 // desabilitar tumbs para gerar varias imagens
+add_filter('big_image_size_threshold', '__return_false');
 add_filter('intermediate_image_sizes', '__return_empty_array');
 add_theme_support('post-thumbnails');
 /**
@@ -213,8 +214,8 @@ function remove_menus()
     //remove_menu_page('themepunch-google-fonts');
     //remove_menu_page('edit.php?post_type=acf-field-group');
     //remove_menu_page('themes.php'); //Appearance
-    remove_menu_page('plugins.php'); //Plugins
-    remove_menu_page('users.php'); //Users
+    // remove_menu_page('plugins.php'); //Plugins
+    // remove_menu_page('users.php'); //Users
     //remove_menu_page('tools.php'); //Tools
     //remove_menu_page('options-general.php'); //Settings
     // plugins

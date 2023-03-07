@@ -1,0 +1,431 @@
+{
+    "key": "group_6407a50398fc8",
+    "title": "GOV CORPORATIVA V1",
+    "fields": [
+        {
+            "key": "field_6407a5039cc3c",
+            "label": "SESSÃO 2",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6407a503a07e3",
+            "label": "Sessão 2",
+            "name": "modulo_03_1",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6407a503a4733",
+                    "label": "Inserir nessa sessão",
+                    "name": "campos_opcionais",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "choices": {
+                        "arq_down": "Arquivo para Download ( PDF)",
+                        "cta": "CTA"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_6407a503a81a2",
+                    "label": "Titulo",
+                    "name": "titulo_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6407a503abd37",
+                    "label": "Descrição",
+                    "name": "titulo_2",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "acfe_textarea_code": 0,
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_6407a503afa3e",
+                    "label": "Imagem da Sessão",
+                    "name": "img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Layout do Figma: <\/br>\r\n&nbsp;&nbsp;&nbsp;width: 562px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 449px <\/br>\r\nRETINA (preferencialmente)<\/br>\r\n&nbsp;&nbsp;&nbsp;width: 1124px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 898px <\/br>\r\nTIPO de arquivo - WEBP<\/br>\r\nMáx tamanho do arquivo - 300kb<\/br>\r\nTamanho preferencialmente - 50kb<\/br>\r\nOBS: para otimizar a imagem, utilize o conversão automática do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "min_width": 560,
+                    "min_height": 440,
+                    "min_size": "",
+                    "max_width": 1200,
+                    "max_height": 900,
+                    "max_size": ".3",
+                    "mime_types": "webp",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_6407a503b3506",
+                    "label": "Arquivo PDF",
+                    "name": "arquivo_pdf",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6407a503a4733",
+                                "operator": "==",
+                                "value": "arq_down"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "return_format": "array",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "library": "all"
+                },
+                {
+                    "key": "field_6407a503b7443",
+                    "label": "CTA",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6407a503a4733",
+                                "operator": "==",
+                                "value": "cta"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "return_format": "array"
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_6407a59189e07",
+            "label": "SESSÃO 3",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6407a53297929",
+            "label": "Sessão 3",
+            "name": "modulo_09_1",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6407a5329792a",
+                    "label": "Inserir nessa sessão",
+                    "name": "campos_opcionais",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "choices": {
+                        "arq_down": "Arquivo para Download ( PDF)",
+                        "cta": "CTA"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "save_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0
+                },
+                {
+                    "key": "field_6407a5329792b",
+                    "label": "Titulo",
+                    "name": "titulo_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6407a5329792c",
+                    "label": "Descrição",
+                    "name": "titulo_2",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "acfe_textarea_code": 0,
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_6407a5329792d",
+                    "label": "Imagem da Sessão",
+                    "name": "img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Layout do Figma: <\/br>\r\n&nbsp;&nbsp;&nbsp;width: 562px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 449px <\/br>\r\nRETINA (preferencialmente)<\/br>\r\n&nbsp;&nbsp;&nbsp;width: 1124px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 898px <\/br>\r\nTIPO de arquivo - WEBP<\/br>\r\nMáx tamanho do arquivo - 300kb<\/br>\r\nTamanho preferencialmente - 50kb<\/br>\r\nOBS: para otimizar a imagem, utilize o conversão automática do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": 560,
+                    "min_height": 440,
+                    "min_size": "",
+                    "max_width": 1200,
+                    "max_height": 900,
+                    "max_size": ".3",
+                    "mime_types": "webp",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_6407a5329792e",
+                    "label": "Arquivo PDF",
+                    "name": "arquivo_pdf",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6407a5329792a",
+                                "operator": "==",
+                                "value": "arq_down"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6407a5329792f",
+                    "label": "CTA",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6407a5329792a",
+                                "operator": "==",
+                                "value": "cta"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "return_format": "array"
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "pagina_gov_corporativa.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "block_editor",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1678222745,
+    "acfe_categories": {
+        "pagina": "PAGINA"
+    }
+}

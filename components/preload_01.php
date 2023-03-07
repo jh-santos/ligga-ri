@@ -2,6 +2,9 @@
 
 </section>
 <script async>
+    $(document).ready(function() {
+
+    });
     window.addEventListener('load', function() {
 
     });

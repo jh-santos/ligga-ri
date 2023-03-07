@@ -3,129 +3,8 @@
     "title": "HOME V1",
     "fields": [
         {
-            "key": "field_63dc06290dbc7",
-            "label": "BANNER",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 1
-        },
-        {
-            "key": "field_63dc06710dbc8",
-            "label": "Banner",
-            "name": "modulo_01",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "acfe_group_modal": 1,
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "full",
-            "sub_fields": [
-                {
-                    "key": "field_63dc068d0dbc9",
-                    "label": "Slides",
-                    "name": "repetidor",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_repeater_stylised_button": 0,
-                    "layout": "table",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Adicionar Linha",
-                    "rows_per_page": 20,
-                    "sub_fields": [
-                        {
-                            "key": "field_63dc069f0dbca",
-                            "label": "Imagem Desktop",
-                            "name": "img_desktop",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "uploader": "wp",
-                            "acfe_thumbnail": 0,
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": ".3",
-                            "mime_types": "png, webp",
-                            "preview_size": "medium",
-                            "parent_repeater": "field_63dc068d0dbc9"
-                        },
-                        {
-                            "key": "field_63dc06cd0dbcb",
-                            "label": "Imagem Mobile",
-                            "name": "img_mobile",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "uploader": "wp",
-                            "acfe_thumbnail": 0,
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": ".2",
-                            "mime_types": "png, webp",
-                            "preview_size": "medium",
-                            "parent_repeater": "field_63dc068d0dbc9"
-                        }
-                    ]
-                }
-            ],
-            "acfe_seamless_style": 0
-        },
-        {
             "key": "field_63dc286f35b3b",
-            "label": "Sessão 1",
+            "label": "Documentos da pagina home",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -143,7 +22,7 @@
         {
             "key": "field_63dc287f35b3c",
             "label": "Documentos",
-            "name": "modulo_02",
+            "name": "modulo_02_1",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -236,6 +115,200 @@
             "acfe_group_modal_close": 0,
             "acfe_group_modal_button": "",
             "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_640793f64caa7",
+            "label": "SESSÃO 2",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_640798175bc59",
+            "label": "Sessão 2",
+            "name": "modulo_03_1",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_640798615bc5c",
+                    "label": "Inserir nessa sessão",
+                    "name": "campos_opcionais",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "choices": {
+                        "arq_down": "Arquivo para Download ( PDF)",
+                        "cta": "CTA"
+                    },
+                    "default_value": [],
+                    "return_format": "value",
+                    "allow_custom": 0,
+                    "layout": "horizontal",
+                    "toggle": 0,
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_6407982f5bc5a",
+                    "label": "Titulo",
+                    "name": "titulo_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6407983d5bc5b",
+                    "label": "Descrição",
+                    "name": "titulo_2",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "acfe_textarea_code": 0,
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_640799d867ada",
+                    "label": "Imagem da Sessão",
+                    "name": "img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Layout do Figma: <\/br>\r\n&nbsp;&nbsp;&nbsp;width: 562px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 449px <\/br>\r\nRETINA (preferencialmente)<\/br>\r\n&nbsp;&nbsp;&nbsp;width: 1124px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 898px <\/br>\r\nTIPO de arquivo - WEBP<\/br>\r\nMáx tamanho do arquivo - 300kb<\/br>\r\nTamanho preferencialmente - 50kb<\/br>\r\nOBS: para otimizar a imagem, utilize o conversão automática do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "acfe_thumbnail": 0,
+                    "return_format": "array",
+                    "min_width": 560,
+                    "min_height": 440,
+                    "min_size": "",
+                    "max_width": 1200,
+                    "max_height": 900,
+                    "max_size": ".3",
+                    "mime_types": "webp",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_640798b75bc5d",
+                    "label": "Arquivo PDF",
+                    "name": "arquivo_pdf",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640798615bc5c",
+                                "operator": "==",
+                                "value": "arq_down"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "uploader": "",
+                    "return_format": "array",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "library": "all"
+                },
+                {
+                    "key": "field_640798e15bc5e",
+                    "label": "CTA",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_640798615bc5c",
+                                "operator": "==",
+                                "value": "cta"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "return_format": "array"
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
         }
     ],
     "location": [
@@ -271,7 +344,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1675373078,
+    "modified": 1678221871,
     "acfe_categories": {
         "pagina": "PAGINA"
     }

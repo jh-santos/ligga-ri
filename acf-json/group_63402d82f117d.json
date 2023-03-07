@@ -206,7 +206,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
             }
         ]
     ],
@@ -232,7 +239,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1677868547,
+    "modified": 1678193418,
     "acfe_categories": {
         "geral": "GERAL",
         "lp": "LP",

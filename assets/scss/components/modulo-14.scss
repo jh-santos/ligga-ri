@@ -1,0 +1,47 @@
+.modulo_14 {
+    position: relative;
+    @include padding;
+    @include padding-lateral;
+    .conteudo {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @include titulo-3;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 12px;
+            span {
+                @include titulo-3;
+                font-weight: 800;
+                color: #000;
+            }
+        }
+        p {
+            @include sub-1;
+            color: #000;
+            margin-bottom: 12px;
+            span {
+                @include sub-1;
+                color: #000;
+            }
+            strong {
+                font-weight: 800;
+            }
+        }
+        a {
+            color: #ea5b0c;
+            font-weight: 800;
+            span {
+                color: #ea5b0c;
+                font-weight: 800;
+            }
+        }
+        span a {
+            color: #ea5b0c;
+            font-weight: 800;
+        }
+    }
+}

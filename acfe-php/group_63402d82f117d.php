@@ -210,7 +210,14 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'all',
+				'value' => 'post',
+			),
+		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
 			),
 		),
 	),
@@ -242,7 +249,7 @@ acf_add_local_field_group(array(
 		'pagina' => 'PAGINA',
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1677868547,
+	'modified' => 1678193418,
 ));
 
 endif;
