@@ -77,6 +77,10 @@
                 @include res-md {
                     width: 40%;
                 }
+                @include res-sm {
+                    width: 157px;
+                    margin: 12px 20px 20px 0px;
+                }
                 .titulo-2 {
                     margin: 16px 0 4px;
                 }

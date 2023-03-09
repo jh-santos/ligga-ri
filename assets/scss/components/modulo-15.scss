@@ -1,20 +1,23 @@
 .modulo_15 {
     position: relative;
-    @include padding;
-    @include padding-lateral;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-height: 421px) {
-        @media (max-height: 695px) {
-            height: 445px !important;
-        }
+
+    @include res-sm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .btn-1 {
         margin-top: 24px;
         @include btn-1;
     }
     .bloco-1 {
+        padding: 15px;
+        @include res-md {
+            @include padding-lateral;
+        }
         .icone {
             margin: 10px 0;
         }
