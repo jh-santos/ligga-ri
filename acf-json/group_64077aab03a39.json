@@ -49,5 +49,8 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1678211879
+    "modified": 1678287689,
+    "acfe_categories": {
+        "post-type": "POST TYPE"
+    }
 }

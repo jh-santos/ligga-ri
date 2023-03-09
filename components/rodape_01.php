@@ -23,7 +23,7 @@
                     <?php $endereco_geral = get_field('endereco_geral', 'option'); ?>
                     <?php if ($endereco_geral) : ?>
                         <div class="item w-100">
-                            <a class="sub-1 text-nowrap" target="<?php echo esc_attr($endereco_geral['target']); ?>" href="<?php echo esc_url($endereco_geral['url']); ?>"><?php echo esc_html($endereco_geral['title']); ?></a>
+                            <a class="sub-1 text-md-nowrap d-flex justify-content-center d-md-block text-center text-md-left" target="<?php echo esc_attr($endereco_geral['target']); ?>" href="<?php echo esc_url($endereco_geral['url']); ?>"><?php echo esc_html($endereco_geral['title']); ?></a>
                         </div>
                     <?php endif; ?>
                     <?php if (have_rows('redes_sociais', 'option')) : ?>

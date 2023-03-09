@@ -367,3 +367,18 @@ function wp_custom_breadcrumbs()
         echo '';
     }
 }
+
+function cwp_desativa_comentarios_frontend()
+{
+    return false;
+}
+add_filter('comments_open', 'cwp_desativa_comentarios_frontend', 20, 2);
+add_filter('pings_open', 'cwp_desativa_comentarios_frontend', 20, 2);
+
+// We load the array of items in the variable $items
+require_once get_template_directory() . '/config/class-wp-bootstrap-navwalker.php';
+register_nav_menus(
+    array(
+        'menu-padrao' => __('Menu Home', 'meu-text-domain'),
+    )
+);

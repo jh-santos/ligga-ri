@@ -110,6 +110,78 @@ acf_add_local_field_group(array(
 			'acfe_group_modal_button' => '',
 			'acfe_group_modal_size' => 'large',
 		),
+		array(
+			'key' => 'field_6408a3b6c831d',
+			'label' => 'FAQ',
+			'name' => '',
+			'aria-label' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'hide_admin' => 0,
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_6408a3cac831e',
+			'label' => 'FAQ',
+			'name' => 'modulo_12_1',
+			'aria-label' => '',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'hide_admin' => 0,
+			'layout' => 'block',
+			'acfe_seamless_style' => 0,
+			'acfe_group_modal' => 0,
+			'sub_fields' => array(
+				array(
+					'key' => 'field_6408a3eac831f',
+					'label' => 'Perguntas Frequentes',
+					'name' => 'perguntas_frequentes',
+					'aria-label' => '',
+					'type' => 'post_object',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'hide_admin' => 0,
+					'post_type' => array(
+						0 => 'faq',
+					),
+					'taxonomy' => '',
+					'return_format' => 'object',
+					'multiple' => 1,
+					'save_custom' => 0,
+					'save_post_status' => 'publish',
+					'acfe_bidirectional' => array(
+						'acfe_bidirectional_enabled' => '0',
+					),
+					'allow_null' => 0,
+					'ui' => 1,
+					'save_post_type' => '',
+				),
+			),
+			'acfe_group_modal_close' => 0,
+			'acfe_group_modal_button' => '',
+			'acfe_group_modal_size' => 'large',
+		),
 	),
 	'location' => array(
 		array(
@@ -140,7 +212,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'pagina' => 'PAGINA',
 	),
-	'modified' => 1678225349,
+	'modified' => 1678287930,
 ));
 
 endif;

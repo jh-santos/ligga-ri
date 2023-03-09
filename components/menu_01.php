@@ -9,47 +9,28 @@
             </div>
         </div>
     </div>
-    <div class="menu-central">
+    <nav class="navbar navbar-expand-lg menu-central">
         <div class="bloco bloco-1">
             <a href="<?php echo home_url(); ?>">
                 <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-ligga-investidores.svg" alt="" class="logo">
             </a>
         </div>
-        <div class="bloco bloco-2">
-            <div class="item drop">
-                <a href="javascript:void(0)" class="sub-1 text-nowrap">A Ligga</a>
-                <div class="drop-container">
-                    <div class="drop-item">
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/sobre-nos">Sobre Nós</a>
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/solucoes">Soluções</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <a href="<?php echo home_url(); ?>/governanca-corporativa/" class="sub-1 text-nowrap">Governança Corporativa</a>
-            </div>
-            <div class="item drop">
-                <a href="javascript:void(0)" class="sub-1 text-nowrap">Relatórios e Comunicados</a>
-                <div class="drop-container">
-                    <div class="drop-item">
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/assembleias-e-reunioes">Assembleias e Reuniões</a>
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/comunicados-societarios">Comunicados Societários</a>
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/relatorios-da-administracao">Relatórios da Administração</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item drop">
-                <a href="javascript:void(0)" class="sub-1 text-nowrap">Informações Financeiras</a>
-                <div class="drop-container">
-                    <div class="drop-item">
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/central-de-resultados">Central de Resultados</a>
-                        <a class="sub-2 f-500 text-nowrap" href="<?php echo home_url(); ?>/emissoes-de-divida">Emissões de Dívida</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <a href="<?php echo home_url(); ?>/servicos-ao-investidor" class="sub-1 text-nowrap">Serviços ao Investidor</a>
-            </div>
+        <?php wp_nav_menu(array(
+            'theme_location'  => 'menu-padrao',
+            'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+            'container'       => 'div',
+            'container_class' => 'collapse navbar-collapse',
+            'container_id'    => 'menu-padrao',
+            'menu_class'      => 'navbar-nav  bloco bloco-2 ml-auto',
+            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+            'walker'          => new WP_Bootstrap_Navwalker(),
+        )); ?>
+        <div class="btn-nav">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menu-padrao" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
         </div>
         <div class="bloco bloco-3">
             <div class="grupo grupo-1">
@@ -75,10 +56,13 @@
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
-    </div>
+        <div class="bloco bloco-4"></div>
 
+    </nav>
+
+    <div class="overlay"></div>
 </header>
+
 <h1 hidden style="opacity: 0;width:0;height:0;">
     <?php if (get_field('tag_h1')) {; ?>
         <?php the_field('tag_h1'); ?>
@@ -88,48 +72,55 @@
 </h1>
 <script async>
     $(document).ready(function() {
-        $('.menu_01 .bloco-2 .drop').on('click', function() {
-            if (!$(this).hasClass('ativo')) {
-                var temp = $(this),
-                    temp1 = temp.find('.drop-item').outerHeight(true);
-                $('.menu_01 .bloco-2 .drop-container').css('height', '0');
-                $('.menu_01 .bloco-2 .drop').removeClass('ativo');
-                temp.find('.drop-container').css('height', temp1);
-                temp.addClass('ativo');
+        $('.menu_01 .dropdown .nav-link').on('click', function() {
+
+            var temp = $(this).attr('aria-expanded'),
+                pai = $(this).parent('li'),
+                tamanho = pai.find('.dropdown-menu .nav-item').outerHeight(),
+                quant = $(this).siblings('.dropdown-menu').find('.dropdown-item').length,
+                resp = tamanho * quant;
+            // console.log(temp, tamanho, quant, resp, pai);
+            closeAll();
+            if (temp == 'false') {
+                $(this).siblings('.dropdown-menu').css('height', resp).addClass('ativo');
                 $('.menu_01 .overlay').addClass('ativo');
-            } else {
-                $('.menu_01 .bloco-2 .drop-container').css('height', '0');
-                $('.menu_01 .bloco-2 .drop').removeClass('ativo');
-                $('.menu_01 .overlay').removeClass('ativo');
+                $('.menu_01 .collapse').addClass('show');
             }
-        });
+        })
         $('.menu_01 .overlay').on('click', function() {
-            $('.menu_01 .bloco-2 .drop-container').css('height', '0');
-            $('.menu_01 .bloco-2 .drop').removeClass('ativo');
-            $('.menu_01 .overlay').removeClass('ativo');
-            // retira ativa se opcional
-            $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
-            $('.menu_01 .bloco-2').removeClass('disabled');
-            $('.menu_01 .bloco-3 .grupo-1').removeClass('ativo');
+            closeAll();
         })
         $('.menu_01 .bloco-3 .btn-2').on('click', function() {
-
             var temp = $(this).attr('busca');
             if (temp == 'open') {
-                $('.menu_01 .bloco-2').addClass('disabled');
+                closeAll();
+                // abrir busca
                 $('.menu_01 .bloco-3 .grupo-1').addClass('ativo');
+                $('.menu_01 .bloco-2').addClass('disabled');
                 $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
                 $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').focus();
                 $('.menu_01 .overlay').addClass('ativo');
             } else if (temp == 'close') {
-                $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
-                $('.menu_01 .bloco-2').removeClass('disabled');
-                $('.menu_01 .bloco-3 .grupo-1').removeClass('ativo');
-                $('.menu_01 .overlay').removeClass('ativo');
+                closeAll();
             }
 
         });
 
+        function closeAll() {
+
+            // fechar menus
+            $('.menu_01 .nav-item .dropdown-menu').css('height', '0').removeClass('ativo');
+            $('.menu_01 .overlay').removeClass('ativo');
+            $('.menu_01 .overlay').removeClass('ativo');
+            $('.menu_01 .bloco-2').removeClass('disabled');
+            // fechar busca
+            $('.menu_01 .bloco-3 .grupo-1 .busca .form-input').val('');
+            $('.menu_01 .bloco-3 .grupo-1').removeClass('ativo');
+            $('.menu_01 .overlay').removeClass('ativo');
+            // menu mobile
+            $('menu_01 .collapse').removeClass('show');
+
+        }
     });
     window.addEventListener('load', function() {
 
