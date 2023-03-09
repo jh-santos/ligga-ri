@@ -18,6 +18,13 @@
                                     </div>
                                 <?php endwhile; ?>
                             <?php } else { ?>
+                                <div class="item">
+                                    <picture class="w-100">
+                                        <source media='(min-width:769px)' srcset='<?php echo esc_url($img_desktop['url']); ?>'>
+                                        <source media='(max-width:768px)' srcset='<?php echo esc_url($img_mobile['url']); ?>'>
+                                        <img loading='lazy' class='img-fluid w-100' src='' alt='<?php echo esc_attr($img_desktop['alt']); ?>'>
+                                    </picture>
+                                </div>
                             <?php }; ?>
                         </div>
                     </div>
