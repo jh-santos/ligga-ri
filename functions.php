@@ -219,7 +219,7 @@ function remove_menus()
     //remove_menu_page('tools.php'); //Tools
     //remove_menu_page('options-general.php'); //Settings
     // plugins
-    remove_menu_page('mo_firebase_authentication'); //firebase
+    // remove_menu_page('mo_firebase_authentication'); //firebase
 }
 add_action('admin_menu', 'remove_menus');
 

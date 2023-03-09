@@ -18,15 +18,6 @@
                                     </div>
                                 <?php endwhile; ?>
                             <?php } else { ?>
-                                <div class="item">
-                                    <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
-                                </div>
-                                <div class="item">
-                                    <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
-                                </div>
-                                <div class="item">
-                                    <figure><img loading='lazy' class='img-fluid w0199' src='<?php bloginfo('template_url'); ?>/assets/img/modulo_01_1.webp' alt='' srcset=''></figure>
-                                </div>
                             <?php }; ?>
                         </div>
                     </div>

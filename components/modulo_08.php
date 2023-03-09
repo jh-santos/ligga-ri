@@ -1,17 +1,17 @@
 <section class='modulo_08 bg_color'>
     <div class='container-fluid'>
         <div class='row'>
-            <div class='col-md-6 pl-0 pl-md-3 '>
+            <div class='col-md-6 px-0 '>
                 <div class="bloco bloco-1">
                     <h2 class="titulo-1 f-800">Conheça nossos produtos para o B2B </h2>
                 </div>
             </div>
-            <div class="col-md-6 pl-0 pl-md-3 d-flex align-items-center">
+            <div class="col-md-6 d-flex align-items-center px-0">
                 <div class="bloco bloco-2">
                     <h3 class="titulo-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non aliquet justo. Sed efficitur condimentum ipsum ut imperdiet. Phasellus vel rutrum sem. Etiam luctus sem lorem, at ullamcorper nisi tincidunt sed.</h3>
                 </div>
             </div>
-            <div class="col-12 px-0 px-md-3">
+            <div class="col-12 px-0">
                 <div class="bloco bloco-3">
                     <div class="slick-1">
                         <div class="item">
@@ -47,8 +47,8 @@
 <script async>
     $(document).ready(function() {
         $('.modulo_08 .slick-1').slick({
-            infinite: false,
-            slidesToShow: 4,
+            infinite: true,
+            slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             dots: true,
@@ -56,14 +56,7 @@
             pauseOnFocus: false,
             pauseOnHover: false,
             pauseOnDotsHover: false,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    variableWidth: true
-                }
-            }]
+            variableWidth: true
         })
 
     });

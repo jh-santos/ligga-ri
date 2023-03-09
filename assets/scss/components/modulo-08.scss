@@ -2,7 +2,6 @@
     position: relative;
     overflow: hidden;
     @include padding;
-    @include padding-lateral;
     &.bg_color {
         background-color: #f3f3f3;
     }
@@ -22,6 +21,9 @@
         @include sub-1;
         color: #000;
     }
+    .bloco {
+        @include padding-lateral;
+    }
     .bloco-1 {
         .titulo-1 {
             max-width: 400px;
@@ -32,6 +34,7 @@
     }
     .bloco-3 {
         margin-top: 40px;
+        padding-right: 0;
         @include res-md {
             margin-right: -24px;
         }
@@ -41,14 +44,27 @@
                 margin-top: 12px;
                 position: relative;
                 @include dots-2;
+                margin-left: -23px;
+                @include res-md {
+                    margin-right: -12px;
+                }
             }
             .item {
-                padding: 40px 20px;
+                padding: 40px 30px;
                 background-color: #fff;
                 margin-right: 24px;
+                display: flex;
                 text-align: center;
-                @include res-md {
+                justify-content: center;
+                flex-direction: column;
+                width: 400px;
+                height: 420px;
+                @include res-hd {
+                    padding: 40px 20px;
                     width: 300px;
+                    height: 320px;
+                }
+                @include res-md {
                     margin-right: 12px;
                 }
                 .titulo-3 {

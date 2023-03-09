@@ -3,6 +3,9 @@
         bottom: 30px;
         @include dots-1;
     }
+    .slick-1 {
+        margin-bottom: 0;
+    }
     .item {
         position: relative;
         display: flex;

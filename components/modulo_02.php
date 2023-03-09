@@ -44,7 +44,7 @@
                                     <span class="sub-1">15 FEV - Lorem ipsum dolor sit amet, consectetur elit. Sed diam orcidiusleti...</span>&nbsp;
                                 </a>
                             </div>
-                            <div class="d-flex justify-content-center justify-content-md-start">
+                            <div class="d-none justify-content-center justify-content-md-start">
                                 <a class="btn-1" href="">Ver todos</a>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                     <span class="sub-1">15 FEV - Lorem ipsum dolor sit amet, consectetur elit. Sed diam orcidiusleti...</span>&nbsp;
                                 </a>
                             </div>
-                            <div class="d-flex justify-content-center justify-content-md-start">
+                            <div class="d-none justify-content-center justify-content-md-start">
                                 <a class="btn-1" href="">Ver todos</a>
                             </div>
                         </div>
