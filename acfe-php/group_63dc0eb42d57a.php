@@ -7,42 +7,26 @@ acf_add_local_field_group(array(
 	'title' => 'DOCUMENTOS',
 	'fields' => array(
 		array(
-			'key' => 'field_63dc0eb4d1c2e',
+			'key' => 'field_63dc2e9b3abad',
 			'label' => 'Arquivo',
 			'name' => 'arquivo',
 			'aria-label' => '',
 			'type' => 'file',
 			'instructions' => '',
-			'required' => 0,
+			'required' => 1,
 			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
+			'hide_admin' => 0,
 			'uploader' => '',
-			'return_format' => 'url',
+			'return_format' => 'array',
 			'min_size' => '',
 			'max_size' => '',
 			'mime_types' => '',
 			'library' => 'all',
-		),
-		array(
-			'key' => 'field_63dc2e9b3abad',
-			'label' => 'Arquivo URL',
-			'name' => 'arquivo_URL',
-			'aria-label' => '',
-			'type' => 'url',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
 		),
 	),
 	'location' => array(
@@ -82,7 +66,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1675374715,
+	'modified' => 1678471270,
 ));
 
 endif;

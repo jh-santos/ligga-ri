@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_63dc286f35b3b",
-            "label": "Documentos da pagina home",
+            "label": "SESSÃO 1",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,15 +16,16 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "placement": "left",
             "endpoint": 0
         },
         {
-            "key": "field_63dc287f35b3c",
-            "label": "Documentos",
+            "key": "field_640b772ab4026",
+            "label": "Categorias 1",
             "name": "modulo_02_1",
             "aria-label": "",
-            "type": "group",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,88 +34,45 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
-            "sub_fields": [
-                {
-                    "key": "field_63dc29523f884",
-                    "label": "Quantidade de Documentos apresentada por Categoria",
-                    "name": "quant_documentos",
-                    "aria-label": "",
-                    "type": "number",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": 5,
-                    "min": 3,
-                    "max": 10,
-                    "placeholder": "",
-                    "step": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_63dc28d835b3d",
-                    "label": "Lado Esquerdo",
-                    "name": "grupo_1",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "categorias",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "object",
-                    "field_type": "select",
-                    "allow_null": 0,
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "multiple": 0
-                },
-                {
-                    "key": "field_63dc29379f481",
-                    "label": "Lado Direito",
-                    "name": "grupo_2",
-                    "aria-label": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "categorias",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "object",
-                    "field_type": "select",
-                    "allow_null": 0,
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "multiple": 0
-                }
-            ],
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            "hide_admin": 0,
+            "taxonomy": "cat_doc_1",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "multiple": 0
+        },
+        {
+            "key": "field_640b784a222c1",
+            "label": "Categorias 2",
+            "name": "modulo_02_2",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "taxonomy": "cat_doc_1",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "select",
+            "allow_null": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "multiple": 0
         },
         {
             "key": "field_640793f64caa7",
@@ -227,7 +185,7 @@
                     "label": "Imagem da Sessão",
                     "name": "img",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "image_aspect_ratio_crop",
                     "instructions": "Layout do Figma: <\/br>\r\n&nbsp;&nbsp;&nbsp;width: 562px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 449px <\/br>\r\nRETINA (preferencialmente)<\/br>\r\n&nbsp;&nbsp;&nbsp;width: 1124px <\/br>\r\n&nbsp;&nbsp;&nbsp;height: 898px <\/br>\r\nTIPO de arquivo - WEBP<\/br>\r\nMáx tamanho do arquivo - 300kb<\/br>\r\nTamanho preferencialmente - 50kb<\/br>\r\nOBS: para otimizar a imagem, utilize o conversão automática do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
                     "required": 0,
                     "conditional_logic": 0,
@@ -237,18 +195,19 @@
                         "id": ""
                     },
                     "hide_admin": 0,
-                    "uploader": "",
-                    "acfe_thumbnail": 0,
+                    "crop_type": "aspect_ratio",
+                    "aspect_ratio_width": 1124,
+                    "aspect_ratio_height": 898,
                     "return_format": "array",
-                    "min_width": 560,
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 551,
                     "min_height": 440,
                     "min_size": "",
-                    "max_width": 1200,
-                    "max_height": 900,
+                    "max_width": "",
+                    "max_height": "",
                     "max_size": ".3",
-                    "mime_types": "webp",
-                    "preview_size": "medium",
-                    "library": "all"
+                    "mime_types": "webp"
                 },
                 {
                     "key": "field_640798b75bc5d",
@@ -344,7 +303,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1678221871,
+    "modified": 1678473471,
     "acfe_categories": {
         "pagina": "PAGINA"
     }

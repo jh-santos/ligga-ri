@@ -72,7 +72,7 @@ acf_add_local_field_group(array(
 							'label' => 'Imagem Desktop',
 							'name' => 'img_desktop',
 							'aria-label' => '',
-							'type' => 'image',
+							'type' => 'image_aspect_ratio_crop',
 							'instructions' => 'Layout do Figma: </br>
 &nbsp;&nbsp;&nbsp;width: 1366px </br>
 &nbsp;&nbsp;&nbsp;height: 640px </br>
@@ -90,18 +90,20 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 								'class' => '',
 								'id' => '',
 							),
-							'uploader' => '',
-							'acfe_thumbnail' => 0,
+							'hide_admin' => 0,
+							'crop_type' => 'aspect_ratio',
+							'aspect_ratio_width' => 2732,
+							'aspect_ratio_height' => 1280,
 							'return_format' => 'array',
+							'preview_size' => 'medium',
+							'library' => 'all',
 							'min_width' => 1366,
-							'min_height' => 350,
+							'min_height' => 640,
 							'min_size' => '',
 							'max_width' => '',
 							'max_height' => '',
 							'max_size' => '.5',
 							'mime_types' => 'webp',
-							'preview_size' => 'medium',
-							'library' => 'all',
 							'parent_repeater' => 'field_640a0a722ec2b',
 						),
 						array(
@@ -109,7 +111,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 							'label' => 'Imagem Mobile',
 							'name' => 'img_mobile',
 							'aria-label' => '',
-							'type' => 'image',
+							'type' => 'image_aspect_ratio_crop',
 							'instructions' => 'Layout: </br>
 &nbsp;&nbsp;&nbsp;width: 375px </br>
 &nbsp;&nbsp;&nbsp;height: 500px </br>
@@ -126,18 +128,20 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 								'class' => '',
 								'id' => '',
 							),
-							'uploader' => '',
-							'acfe_thumbnail' => 0,
+							'hide_admin' => 0,
+							'crop_type' => 'aspect_ratio',
+							'aspect_ratio_width' => 750,
+							'aspect_ratio_height' => 1000,
 							'return_format' => 'array',
+							'preview_size' => 'medium',
 							'library' => 'all',
 							'min_width' => 375,
 							'min_height' => 500,
 							'min_size' => '',
-							'max_width' => 750,
-							'max_height' => 1000,
-							'max_size' => '.1',
-							'mime_types' => 'webp',
-							'preview_size' => 'medium',
+							'max_width' => '',
+							'max_height' => '',
+							'max_size' => '.3',
+							'mime_types' => '',
 							'parent_repeater' => 'field_640a0a722ec2b',
 						),
 						array(
@@ -220,7 +224,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1678385461,
+	'modified' => 1678467301,
 ));
 
 endif;

@@ -1,9 +1,9 @@
 {
-    "key": "group_64061fcb6028b",
-    "title": "BANNER TIPO 2",
+    "key": "group_640f1acbb0bef",
+    "title": "BANNER TIPO 2 - CAT - DOCUMENTOS",
     "fields": [
         {
-            "key": "field_64061fcb4ee7c",
+            "key": "field_640f1acbb5033",
             "label": "Banner",
             "name": "",
             "aria-label": "",
@@ -20,9 +20,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_640620454ee7d",
+            "key": "field_640f1acbb8d7c",
             "label": "Banner Principal",
-            "name": "modulo_07_1",
+            "name": "modulo_16_1",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -33,6 +33,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "layout": "block",
             "acfe_group_modal": 1,
             "acfe_group_modal_close": 0,
@@ -40,27 +41,7 @@
             "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
-                    "key": "field_640620dc4ee81",
-                    "label": "Titulo do Banner",
-                    "name": "titulo_1",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Titulo da Pagina, limitado a 35 caracteres conforme layout",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": 35,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_6406210c4ee82",
+                    "key": "field_640f1acbc0920",
                     "label": "Descrição",
                     "name": "titulo_2",
                     "aria-label": "",
@@ -69,10 +50,11 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
+                    "hide_admin": 0,
                     "default_value": "",
                     "maxlength": 150,
                     "placeholder": "",
@@ -80,7 +62,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_6406208b4ee7f",
+                    "key": "field_640f1acbc422a",
                     "label": "Imagem Desktop",
                     "name": "img_desktop",
                     "aria-label": "",
@@ -109,7 +91,7 @@
                     "mime_types": "webp"
                 },
                 {
-                    "key": "field_640620c04ee80",
+                    "key": "field_640f1acbc7df9",
                     "label": "Imagem Mobile",
                     "name": "img_mobile",
                     "aria-label": "",
@@ -144,9 +126,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "pagina_solucoes.php"
+                "value": "categoria"
             }
         ]
     ],
@@ -167,5 +149,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1678711507
+    "modified": 1678713268
 }

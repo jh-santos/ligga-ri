@@ -2,95 +2,76 @@
     <div class='container-fluid'>
         <div class='row'>
             <div class='col-12 px-0 px-md-3'>
+
                 <div class="bloco bloco-1">
-                    <button class="titulo f-800 item item-1 ativo" grupo="1">Administração</button>
-                    <button class="titulo f-800 item item-2" grupo="2">Diretoria</button>
-                    <button class="titulo f-800 item item-3" grupo="3">Conselhos</button>
-                    <button class="titulo f-800 item item-4" grupo="4">Comitês</button>
+                    <?php
+                    $args = array(
+                        'taxonomy' => 'departamentos',
+                        'hide_empty' => false,
+                    );
+
+                    $categories = get_terms($args);
+
+                    if (!empty($categories) && !is_wp_error($categories)) : ?>
+                        <?php $cont = 1;
+                        foreach ($categories as $category) : ?>
+                            <?php ($cont === 1) ? $valor = 'ativo' : $valor = ''; ?>
+                            <button class="titulo f-800 item item-<?php echo $cont; ?> <?php echo $valor; ?>" grupo="<?php echo $cont; ?>"><?php echo esc_html($category->name); ?></button>
+                        <?php
+                            $cont++;
+                        endforeach; ?>
+                    <?php wp_reset_postdata();
+                    endif; ?>
                 </div>
                 <div class="bloco bloco-2">
-                    <div class="item item-1 ativo" grupo="1">
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                    </div>
-                    <div class="item item-2" grupo="2">
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
+                    <?php $contador = 1;
 
-                    </div>
-                    <div class="item item-3" grupo="3">
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
+                    $args = array('taxonomy' => 'departamentos', 'orderby' => 'modified', 'order'   => 'DESC');
+                    $my_categories
+                        = get_categories($args);
+                    ?>
+                    <!-- por categoria -->
+                    <?php foreach ($my_categories as $category) : ?>
+                        <?php ($contador === 1) ? $valor = 'ativo' : $valor = ''; ?>
+                        <div class="item item-<?php echo $contador; ?> <?php echo $valor; ?>" grupo="<?php echo $contador; ?>">
+                            <?php
+                            $args = array(
+                                'post_type' => 'colaboradores', 'orderby' => 'modified', 'order'   => 'DESC', 'posts_per_page' => -1,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'departamentos',
+                                        'field' => 'term_id',
+                                        'terms' => $category->term_id
+                                    )
+                                )
+                            );
+                            $wp_query = new WP_Query($args);
+                            $total = $wp_query;
+                            $cont = 1;
+                            if (have_posts()) :
+                                while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                    <div class="colab">
+                                        <div class="efeito-img">
+                                            <?php $img_colab_1 = get_field('img_colab_1'); ?>
+                                            <?php $img_colab_2 = get_field('img_colab_2'); ?>
+                                            <img loading="eager" class="img-1 img-fluid w-100" src="<?php echo esc_url($img_colab_1['url']); ?>" alt="<?php echo esc_attr($img_colab_1['alt']); ?>">
+                                            <img loading="eager" class="img-2 img-fluid w-100" src="<?php echo esc_url($img_colab_2['url']); ?>" alt="<?php echo esc_attr($img_colab_2['alt']); ?>">
+                                        </div>
+                                        <h2 class="titulo-2 f-800"><?php the_title(); ?></h2>
+                                        <h3 class="sub-1"><?php the_field('cargo'); ?></h3>
+                                    </div>
+                                    <?php $cont++; ?>
+                                <?php endwhile;
+                            else : ?>
+                            <?php endif; ?>
                         </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
+                        <?php wp_reset_query(); ?>
+                    <?php $contador++;
+                    endforeach; ?>
 
-                    </div>
-                    <div class="item item-4" grupo="4">
-                        <div class="colab">
-                            <img loading="eager" class="img-fluid w-100" src="<?php bloginfo('template_url'); ?>/assets/img/modulo_10_1.webp" alt="">
-                            <h2 class="titulo-2 f-800">Nome do Colaborador</h2>
-                            <h3 class="sub-1">Nome do Cargo</h3>
-                        </div>
-
-                    </div>
                 </div>
+
+
             </div>
         </div>
     </div>

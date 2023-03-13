@@ -3,11 +3,11 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_64061fcb6028b',
-	'title' => 'BANNER TIPO 2',
+	'key' => 'group_640f1acbb0bef',
+	'title' => 'BANNER TIPO 2 - CAT - DOCUMENTOS',
 	'fields' => array(
 		array(
-			'key' => 'field_64061fcb4ee7c',
+			'key' => 'field_640f1acbb5033',
 			'label' => 'Banner',
 			'name' => '',
 			'aria-label' => '',
@@ -24,9 +24,9 @@ acf_add_local_field_group(array(
 			'endpoint' => 0,
 		),
 		array(
-			'key' => 'field_640620454ee7d',
+			'key' => 'field_640f1acbb8d7c',
 			'label' => 'Banner Principal',
-			'name' => 'modulo_07_1',
+			'name' => 'modulo_16_1',
 			'aria-label' => '',
 			'type' => 'group',
 			'instructions' => '',
@@ -37,6 +37,7 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
+			'hide_admin' => 0,
 			'layout' => 'block',
 			'acfe_group_modal' => 1,
 			'acfe_group_modal_close' => 0,
@@ -44,27 +45,7 @@ acf_add_local_field_group(array(
 			'acfe_group_modal_size' => 'large',
 			'sub_fields' => array(
 				array(
-					'key' => 'field_640620dc4ee81',
-					'label' => 'Titulo do Banner',
-					'name' => 'titulo_1',
-					'aria-label' => '',
-					'type' => 'text',
-					'instructions' => 'Titulo da Pagina, limitado a 35 caracteres conforme layout',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '50',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'maxlength' => 35,
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-				),
-				array(
-					'key' => 'field_6406210c4ee82',
+					'key' => 'field_640f1acbc0920',
 					'label' => 'Descrição',
 					'name' => 'titulo_2',
 					'aria-label' => '',
@@ -73,10 +54,11 @@ acf_add_local_field_group(array(
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '50',
+						'width' => '',
 						'class' => '',
 						'id' => '',
 					),
+					'hide_admin' => 0,
 					'default_value' => '',
 					'maxlength' => 150,
 					'placeholder' => '',
@@ -84,7 +66,7 @@ acf_add_local_field_group(array(
 					'append' => '',
 				),
 				array(
-					'key' => 'field_6406208b4ee7f',
+					'key' => 'field_640f1acbc422a',
 					'label' => 'Imagem Desktop',
 					'name' => 'img_desktop',
 					'aria-label' => '',
@@ -122,7 +104,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 					'mime_types' => 'webp',
 				),
 				array(
-					'key' => 'field_640620c04ee80',
+					'key' => 'field_640f1acbc7df9',
 					'label' => 'Imagem Mobile',
 					'name' => 'img_mobile',
 					'aria-label' => '',
@@ -165,9 +147,9 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'location' => array(
 		array(
 			array(
-				'param' => 'page_template',
+				'param' => 'taxonomy',
 				'operator' => '==',
-				'value' => 'pagina_solucoes.php',
+				'value' => 'categoria',
 			),
 		),
 	),
@@ -188,7 +170,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1678711507,
+	'modified' => 1678713268,
 ));
 
 endif;

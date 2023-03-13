@@ -1,0 +1,29 @@
+.modulo_16 {
+    position: relative;
+    cursor: context-menu;
+    .titulo-1 {
+        @include titulo-1;
+        color: #fff;
+    }
+    .titulo-2 {
+        @include sub-1;
+        color: #fff;
+    }
+    .bloco {
+        position: absolute;
+        max-width: 570px;
+        margin: 0 auto;
+        @include res-md {
+            @include padding-lateral;
+        }
+        .titulo-1 {
+            margin-bottom: 12px;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            @include res-md {
+                white-space: normal;
+            }
+        }
+    }
+}

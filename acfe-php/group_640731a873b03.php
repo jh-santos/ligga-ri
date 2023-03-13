@@ -45,10 +45,10 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_6407320d5d185',
-			'label' => 'Imagem',
-			'name' => 'img_colab',
+			'label' => 'Imagem 1',
+			'name' => 'img_colab_1',
 			'aria-label' => '',
-			'type' => 'image',
+			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Layout do Figma:
 	 width: 300px
 	 height: 300px
@@ -66,9 +66,51 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 				'class' => '',
 				'id' => '',
 			),
-			'uploader' => '',
-			'acfe_thumbnail' => 0,
+			'hide_admin' => 0,
+			'crop_type' => 'aspect_ratio',
+			'aspect_ratio_width' => 600,
+			'aspect_ratio_height' => 600,
 			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => 300,
+			'min_height' => 300,
+			'min_size' => '',
+			'max_width' => 600,
+			'max_height' => 600,
+			'max_size' => '.2',
+			'mime_types' => 'webp',
+		),
+		array(
+			'key' => 'field_640b5c098b63d',
+			'label' => 'Imagem 2',
+			'name' => 'img_colab_2',
+			'aria-label' => '',
+			'type' => 'image_aspect_ratio_crop',
+			'instructions' => 'Layout do Figma:
+	 width: 300px
+	 height: 300px
+RETINA (preferencialmente)
+	 width: 600px
+	 height: 600px
+TIPO de arquivo - WEBP
+Máx tamanho do arquivo - 200kb
+Tamanho preferencialmente - 50kb
+OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => '',
+			),
+			'hide_admin' => 0,
+			'crop_type' => 'aspect_ratio',
+			'aspect_ratio_width' => 600,
+			'aspect_ratio_height' => 600,
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
 			'min_width' => '',
 			'min_height' => '',
 			'min_size' => '',
@@ -76,8 +118,6 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 			'max_height' => '',
 			'max_size' => '.2',
 			'mime_types' => 'webp',
-			'preview_size' => 'medium',
-			'library' => 'all',
 		),
 	),
 	'location' => array(
@@ -109,7 +149,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_categories' => array(
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1678193292,
+	'modified' => 1678466070,
 ));
 
 endif;

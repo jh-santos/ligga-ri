@@ -14,7 +14,7 @@
 
 <?php if (have_posts()) :
     while (have_posts()) : the_post(); ?>
-        <main id="assembleias-e-reunioes_v1" class="assembleias-e-reunioes">
+        <main id="relatorios_anuais_v1" class="relatorios_anuais">
             <?php get_template_part('components/menu_01'); ?>
             <?php get_template_part('components/modulo_07'); ?>
             <?php get_template_part('components/modulo_11'); ?>

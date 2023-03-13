@@ -219,7 +219,7 @@ function remove_menus()
     //remove_menu_page('tools.php'); //Tools
     //remove_menu_page('options-general.php'); //Settings
     // plugins
-    // remove_menu_page('mo_firebase_authentication'); //firebase
+    remove_menu_page('mo_firebase_authentication'); //firebase
 }
 add_action('admin_menu', 'remove_menus');
 
@@ -382,3 +382,31 @@ register_nav_menus(
         'menu-padrao' => __('Menu Home', 'meu-text-domain'),
     )
 );
+
+
+function ordenacao_categoria($term_id)
+{
+    // Define o argumento "orderby" como "id" para manter a ordem das categorias
+    $args = array(
+        'orderby' => 'id',
+        'hide_empty' => false,
+        'parent' => 0
+    );
+
+    // Recupera todas as categorias pai
+    $categories = get_terms('categoria', $args);
+
+    // Define a ordem das categorias pai
+    $order = array();
+    foreach ($categories as $category) {
+        $order[] = $category->term_id;
+    }
+
+    // Define o argumento "order" com a ordem das categorias pai
+    $args['order'] = implode(',', $order);
+
+    // Atualiza as categorias utilizando os argumentos definidos acima
+    wp_update_term($term_id, 'categoria', $args);
+}
+
+add_action('edited_term', 'ordenacao_categoria');
