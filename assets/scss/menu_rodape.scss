@@ -356,7 +356,7 @@
             list-style: none;
 
             .nav-link {
-                @include sub-3;
+                @include sub-2;
                 color: #fff;
                 padding-right: 0px;
                 margin-right: 24px;
@@ -374,7 +374,7 @@
                 }
                 span {
                     white-space: nowrap;
-                    @include sub-3;
+                    @include sub-2;
                     color: #fff;
                     @include res-lg {
                         @include titulo-4;
@@ -442,7 +442,7 @@
                 }
                 .dropdown-item,
                 .dropdown-item span {
-                    @include sub-3;
+                    @include sub-2;
                     color: #000;
                     @include res-lg {
                         color: #fff;

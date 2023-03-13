@@ -15,10 +15,13 @@
                 </div>
             </div>
             <div class="grupo grupo-2">
-                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-1.svg" alt=""></button>
-                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-2.svg" alt=""></button>
-                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-3.svg" alt=""></button>
-                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-4.svg" alt=""></button>
+                <button class="btn-3" data-acessibilidade=".pojo-a11y-btn-high-contrast"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-2.svg" alt=""></button>
+                <button class="btn-3" data-acessibilidade=".pojo-a11y-btn-resize-plus"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-3.svg" alt=""></button>
+                <button class="btn-3" data-acessibilidade=".pojo-a11y-btn-resize-minus"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-4.svg" alt=""></button>
+                <button class="btn-3" data-acessibilidade=".pojo-a11y-btn-reset"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448">
+                        <title>Reset</title>
+                        <path fill="#fff" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path>
+                    </svg></button>
 
             </div>
         </div>
@@ -139,6 +142,11 @@
             $('menu_01 .collapse').removeClass('show');
 
         }
+        $('.menu_01 .menu-top .grupo-2 .btn-3').on('click', function() {
+            var temp = $(this).attr('data-acessibilidade');
+            console.log(temp)
+            $(temp).click();
+        })
     });
     window.addEventListener('load', function() {
         if (typeof(stockdio_events) == "undefined") {
