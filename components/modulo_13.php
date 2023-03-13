@@ -19,10 +19,7 @@
                     <div class="ninja-form">
                         <?php echo do_shortcode(" [ninja_form id='2']"); ?>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
     </div>

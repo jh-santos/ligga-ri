@@ -22,7 +22,8 @@
                                     <?php while ($the_query->have_posts()) {
                                         $the_query->the_post();
                                     ?>
-                                        <a ano-post="<?php echo get_the_date('Y') ?>" class="item" href="<?php echo esc_url($arquivo['url']); ?>" download="<?php echo date('d-M'); ?> - <?php the_title(); ?>">
+                                        <?php $arquivo = get_field('arquivo'); ?>
+                                        <a ano-post="<?php echo get_the_date('Y') ?>" class="item" href="<?php echo esc_url($arquivo['url']); ?>" target="_blank">
                                             <span class="sub-1 f-800 text-uppercase"><?php echo date('d-M'); ?> -</span>&nbsp;
                                             <span class="sub-1"><?php the_title(); ?></span>&nbsp;
                                         </a>
