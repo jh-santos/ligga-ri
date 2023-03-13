@@ -30,6 +30,15 @@
         }
     }
     .bloco-2 {
+        .ninja-form {
+            .nf-field-label,
+            .nf-before-form-content {
+                display: none;
+            }
+            .submit-wra input[type="submit"] {
+                @include btn-1;
+            }
+        }
         .formulario {
             position: relative;
             .form-input {
