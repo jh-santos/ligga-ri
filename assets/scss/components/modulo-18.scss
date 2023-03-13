@@ -1,0 +1,137 @@
+.modulo_18 {
+    position: relative;
+    @include padding;
+    .titulo {
+        @include titulo-3;
+        color: #000;
+
+        @include res-md {
+            text-align: center;
+        }
+    }
+    .sub-1 {
+        @include sub-2;
+        color: #000;
+    }
+    .btn-1 {
+        @include btn-1;
+        width: 120px;
+    }
+    .bloco-1 {
+        margin-bottom: 24px;
+        .formulario {
+            .form-input {
+                border: 1px solid #969696;
+                padding: 5px;
+                width: 100px;
+                border-radius: 4px;
+                background-color: #fff;
+
+                option {
+                    margin: 5px 0;
+                    text-indent: 5px;
+                }
+            }
+        }
+    }
+    .bloco-2 {
+        .grupo {
+            margin-bottom: 24px;
+
+            .titulo {
+                padding-bottom: 12px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #969696;
+                margin-bottom: 12px;
+                .icone {
+                    position: absolute;
+                    right: 16px;
+                    svg path {
+                        transition: 0.2s;
+                        transform-origin: center;
+                        transform: rotateX(180deg);
+                        fill: #000;
+                    }
+                }
+                &.ativo {
+                    .icone {
+                        svg path {
+                            transition: 0.2s;
+                            transform: rotateX(0deg);
+                            fill: #ea5b0c;
+                        }
+                    }
+                }
+            }
+            .grupo-lista {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 12px 0;
+                z-index: 5;
+
+                .animacao {
+                    position: absolute;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 5;
+                    opacity: 1;
+                    transition: 0.2s;
+                    .load {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                &.transicao {
+                    .animacao {
+                        animation: mod-2-1 1 0.2s;
+                        opacity: 0;
+                        @keyframes mod-2-1 {
+                            0% {
+                                opacity: 1;
+                                z-index: 5;
+                            }
+                            90% {
+                                opacity: 0;
+                                z-index: 5;
+                            }
+                            10% {
+                                opacity: 0;
+                                z-index: 0;
+                            }
+                        }
+                    }
+                }
+                &.desativado {
+                    .animacao {
+                        opacity: 0;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            .item {
+                border-left: 2px solid #ea5b0c;
+                padding-left: 8px;
+                margin-bottom: 25px;
+                @include res-md {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .container-lista {
+                transition: 0.2s;
+                position: relative;
+                overflow: hidden;
+
+                border-bottom: 1px solid #969696;
+            }
+        }
+    }
+}

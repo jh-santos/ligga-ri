@@ -1,6 +1,21 @@
+<?php
+// Define taxonomy prefix eg category
+// Use term for all taxonomies
+$taxonomy_prefix = 'categoria';
+
+// Define term ID
+// Replace NULL with ID of term to be queried eg '123'
+$term_id = NULL;
+
+// Example: Get the term ID in a term archive template
+$term_id = get_queried_object_id();
+
+// Define prefixed term ID
+$term_id_prefixed = $taxonomy_prefix . '_' . $term_id;
+?>
 <!-- acf modulo_16_1 - banner-tipo 2 categorias documentos-->
-<?php if (have_rows('modulo_16_1')) { ?>
-    <?php while (have_rows('modulo_16_1')) : the_row(); ?>
+<?php if (have_rows('modulo_16_1', $term_id_prefixed)) { ?>
+    <?php while (have_rows('modulo_16_1', $term_id_prefixed)) : the_row(); ?>
         <section class='modulo_16'>
             <div class='container-fluid'>
                 <div class='row'>

@@ -284,6 +284,123 @@ acf_add_local_field_group(array(
 			'multiple' => 0,
 			'allow_null' => 0,
 		),
+		array(
+			'key' => 'field_640f33faa51c7',
+			'label' => 'Pagina Busca',
+			'name' => '',
+			'aria-label' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'hide_admin' => 0,
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_640f3526438ac',
+			'label' => 'Banner Pagina Busca',
+			'name' => 'modulo_17_1',
+			'aria-label' => '',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'hide_admin' => 0,
+			'layout' => 'table',
+			'acfe_group_modal' => 1,
+			'acfe_group_modal_close' => 0,
+			'acfe_group_modal_button' => '',
+			'acfe_group_modal_size' => 'large',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_640f3526438af',
+					'label' => 'Imagem Desktop',
+					'name' => 'img_desktop',
+					'aria-label' => '',
+					'type' => 'image_aspect_ratio_crop',
+					'instructions' => 'Layout do Figma: </br>
+&nbsp;&nbsp;&nbsp;width: 1366px </br>
+&nbsp;&nbsp;&nbsp;height: 350px </br>
+RETINA (preferencialmente)</br>
+&nbsp;&nbsp;&nbsp;width: 2732px </br>
+&nbsp;&nbsp;&nbsp;height: 700px </br>
+TIPO de arquivo - WEBP</br>
+Máx tamanho do arquivo - 500kb</br>
+Tamanho preferencialmente - 100kb</br>
+OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => '',
+					),
+					'hide_admin' => 0,
+					'crop_type' => 'aspect_ratio',
+					'aspect_ratio_width' => 2732,
+					'aspect_ratio_height' => 700,
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'library' => 'all',
+					'min_width' => 1366,
+					'min_height' => 350,
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '.5',
+					'mime_types' => 'webp',
+				),
+				array(
+					'key' => 'field_640f3526438b0',
+					'label' => 'Imagem Mobile',
+					'name' => 'img_mobile',
+					'aria-label' => '',
+					'type' => 'image_aspect_ratio_crop',
+					'instructions' => 'Layout: </br>
+&nbsp;&nbsp;&nbsp;width: 375px </br>
+&nbsp;&nbsp;&nbsp;height: 500px </br>
+RETINA </br>
+&nbsp;&nbsp;&nbsp;width: 750px </br>
+&nbsp;&nbsp;&nbsp;height: 1000px </br>
+TIPO de arquivo - WEBP</br>
+Máx tamanho do arquivo - 100kb</br>
+OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '50',
+						'class' => '',
+						'id' => '',
+					),
+					'hide_admin' => 0,
+					'crop_type' => 'aspect_ratio',
+					'aspect_ratio_width' => 750,
+					'aspect_ratio_height' => 1000,
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '.2',
+					'mime_types' => 'webp',
+				),
+			),
+			'acfe_seamless_style' => 0,
+		),
 	),
 	'location' => array(
 		array(
@@ -314,7 +431,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'geral' => 'GERAL',
 	),
-	'modified' => 1678218210,
+	'modified' => 1678718530,
 ));
 
 endif;

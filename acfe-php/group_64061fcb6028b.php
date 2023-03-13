@@ -188,7 +188,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1678711507,
+	'modified' => 1678718261,
 ));
 
 endif;

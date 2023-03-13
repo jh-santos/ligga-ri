@@ -384,17 +384,22 @@ register_nav_menus(
 );
 
 
-function ordenacao_categoria($term_id)
+function my_save_category_order($term_id)
 {
-    // Define o argumento "orderby" como "id" para manter a ordem das categorias
-    $args = array(
-        'orderby' => 'id',
-        'hide_empty' => false,
-        'parent' => 0
-    );
+    global $wpdb;
+
+    // Define a tabela wp_terms e wp_term_taxonomy
+    $terms_table = $wpdb->prefix . 'terms';
+    $term_taxonomy_table = $wpdb->prefix . 'term_taxonomy';
 
     // Recupera todas as categorias pai
-    $categories = get_terms('categoria', $args);
+    $categories = $wpdb->get_results("
+        SELECT t.term_id, tt.parent
+        FROM $terms_table AS t
+        INNER JOIN $term_taxonomy_table AS tt ON t.term_id = tt.term_id
+        WHERE tt.taxonomy = 'category' AND tt.parent = 0
+        ORDER BY t.term_id ASC
+    ");
 
     // Define a ordem das categorias pai
     $order = array();
@@ -402,11 +407,16 @@ function ordenacao_categoria($term_id)
         $order[] = $category->term_id;
     }
 
-    // Define o argumento "order" com a ordem das categorias pai
-    $args['order'] = implode(',', $order);
-
-    // Atualiza as categorias utilizando os argumentos definidos acima
-    wp_update_term($term_id, 'categoria', $args);
+    // Atualiza a ordem das categorias pai
+    $wpdb->query("
+        UPDATE $term_taxonomy_table
+        SET term_order = CASE term_id
+            " . implode(" ", array_map(function ($id) use ($order) {
+        return "WHEN $id THEN " . array_search($id, $order);
+    }, $order)) . "
+        END
+        WHERE taxonomy = 'category' AND parent = 0
+    ");
 }
 
-add_action('edited_term', 'ordenacao_categoria');
+add_action('edited_term', 'my_save_category_order');

@@ -2,14 +2,44 @@
     <div class="container-lg">
         <div class="row ">
             <div class="col-12">
-                <div class="bloco bloco-1 d-none">
+                <div class="bloco bloco-1 ">
                     <div class="formulario">
-                        <select class="form-input" name="ano_referencia" id="" ano_referencia="">
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                        </select>
+                        <?php function my_get_available_years()
+                        {
+                            global $wpdb;
+
+                            // Define a tabela wp_posts e wp_term_relationships
+                            $posts_table = $wpdb->prefix . 'posts';
+                            $term_relationships_table = $wpdb->prefix . 'term_relationships';
+
+                            // Obtém a categoria atual
+                            $category = get_queried_object();
+
+                            // Constrói a cláusula WHERE para selecionar apenas os posts do tipo "documentos" nessa categoria
+                            $where = "$posts_table.post_status = 'publish' AND $posts_table.post_type = 'documentos' AND EXISTS (
+        SELECT 1 FROM $term_relationships_table WHERE object_id = $posts_table.ID AND term_taxonomy_id = $category->term_id
+    )";
+
+                            // Busca os anos distintos em que esses posts foram publicados
+                            $years = $wpdb->get_col("
+        SELECT DISTINCT YEAR($posts_table.post_date)
+        FROM $posts_table
+        WHERE $where
+        ORDER BY YEAR($posts_table.post_date) DESC
+    ");
+
+                            return $years;
+                        }; ?>
+                        <?php
+                        $years = my_get_available_years();
+                        if ($years) :
+                        ?>
+                            <select class="form-input" name="ano_referencia" id="">
+                                <?php foreach ($years as $year) : ?>
+                                    <option value="<?php echo esc_html($year); ?>"><?php echo esc_html($year); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -61,9 +91,13 @@
                                             $cont++;
                                             setup_postdata($post); ?>
                                             <?php $arquivo = get_field('arquivo'); ?>
-                                            <a class="item" href="<?php echo esc_url($arquivo['url']); ?>" download="<?php echo date('d-M'); ?> - <?php the_title(); ?>">
+                                            <a ano-post="<?php echo get_the_date('Y') ?>" class="item" href="<?php echo esc_url($arquivo['url']); ?>" download="<?php echo date('d-M'); ?> - <?php the_title(); ?>">
                                                 <span class="sub-1 f-800 text-uppercase"><?php echo date('d-M'); ?> -</span>&nbsp;
                                                 <span class="sub-1"><?php the_title(); ?></span>&nbsp;
+                                            </a>
+                                            <a ano-post="2022" class="item" href="">
+                                                <span class="sub-1 f-800 text-uppercase"> -</span>&nbsp;
+                                                <span class="sub-1">asdasdasdasd</span>&nbsp;
                                             </a>
                                     <?php }
                                         wp_reset_postdata();
@@ -102,6 +136,19 @@
             }
 
         })
+        console.log($('.modulo_11 .bloco-1 select.form-input option:selected').val())
+        $('.modulo_11 .bloco-1 select.form-input').on('change', function() {
+            $('.modulo_11 .bloco-2 .titulo').removeClass('ativo');
+            $('.modulo_11 .bloco-2 .container-lista').css('height', '0px');
+            atualizaDocumentos()
+        })
+
+        function atualizaDocumentos() {
+            var temp = $('.modulo_11 .bloco-1 select.form-input option:selected').val();
+            $('.modulo_11 .bloco-2 .grupo-lista .item').css('display', 'none').removeClass('filtro-true');
+            $('.modulo_11 .bloco-2 .grupo-lista .item[ano-post="' + temp + '"]').css('display', 'flex').addClass('filtro-true');
+        }
+        atualizaDocumentos()
     });
     window.addEventListener('load', function() {
 
