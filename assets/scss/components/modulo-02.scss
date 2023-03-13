@@ -24,6 +24,7 @@
             border-right: 1px solid #c1bdbd;
             @include res-md {
                 border: none;
+                margin-bottom: 24px;
             }
             .btn-1 {
                 @include res-md {
