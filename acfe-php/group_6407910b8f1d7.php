@@ -401,6 +401,73 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 			),
 			'acfe_seamless_style' => 0,
 		),
+		array(
+			'key' => 'field_640f7ce756dd3',
+			'label' => 'S E O',
+			'name' => '',
+			'aria-label' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'left',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_640f7cf256dd4',
+			'label' => 'GTM Head',
+			'name' => 'gtm_head',
+			'aria-label' => '',
+			'type' => 'acfe_code_editor',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'mode' => 'text/html',
+			'lines' => 1,
+			'indent_unit' => 10,
+			'maxlength' => '',
+			'rows' => 4,
+			'max_rows' => '',
+			'return_format' => array(
+			),
+		),
+		array(
+			'key' => 'field_640f7d2e56dd5',
+			'label' => 'GTM Body',
+			'name' => 'gtm_body',
+			'aria-label' => '',
+			'type' => 'acfe_code_editor',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'mode' => 'text/html',
+			'lines' => 1,
+			'indent_unit' => 4,
+			'maxlength' => '',
+			'rows' => 4,
+			'max_rows' => '',
+			'return_format' => array(
+			),
+		),
 	),
 	'location' => array(
 		array(
@@ -431,7 +498,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_categories' => array(
 		'geral' => 'GERAL',
 	),
-	'modified' => 1678718530,
+	'modified' => 1678736795,
 ));
 
 endif;
