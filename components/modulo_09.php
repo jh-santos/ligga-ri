@@ -6,9 +6,9 @@
                     <div class="col-md-5 mr-md-auto d-flex align-items-center px-md-0 mx-md-n5">
                         <?php $img = get_sub_field('img'); ?>
                         <?php if ($img) { ?>
-                            <figure><img loading='lazy' class='img-fluid' src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"></figure>
+                            <figure><img class='img-fluid' src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>"></figure>
                         <?php } else {; ?>
-                            <figure><img loading='lazy' class='img-fluid' src="<?php bloginfo('template_url'); ?>/assets/img/placeholder_562x450.webp" alt=""></figure>
+                            <figure><img class='img-fluid' src="<?php bloginfo('template_url'); ?>/assets/img/placeholder_562x450.webp" alt=""></figure>
                         <?php  } ?>
                     </div>
                     <div class="col-md-6 d-flex align-items-center">
