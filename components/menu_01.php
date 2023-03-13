@@ -15,7 +15,11 @@
                 </div>
             </div>
             <div class="grupo grupo-2">
-                <a class="titulo f-900" href="<?php echo home_url(); ?>">ACESSIBILIDADE</a>
+                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-1.svg" alt=""></button>
+                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-2.svg" alt=""></button>
+                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-3.svg" alt=""></button>
+                <button class="btn-3"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/img/icone-acessibilidade-4.svg" alt=""></button>
+
             </div>
         </div>
     </div>

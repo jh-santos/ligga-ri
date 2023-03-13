@@ -293,6 +293,11 @@
             display: flex;
             align-items: center;
         }
+        .grupo-2 {
+            .btn-3 {
+                margin-left: 18px;
+            }
+        }
     }
     .menu-central {
         position: absolute;
@@ -842,4 +847,7 @@
             }
         }
     }
+}
+.pojo-a11y-toolbar-toggle {
+    left: -100% !important;
 }
