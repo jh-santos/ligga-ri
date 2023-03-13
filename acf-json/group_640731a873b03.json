@@ -45,7 +45,7 @@
             "name": "img_colab_1",
             "aria-label": "",
             "type": "image_aspect_ratio_crop",
-            "instructions": "Layout do Figma:\r\n   width: 300px\r\n   height: 300px\r\nRETINA (preferencialmente)\r\n   width: 600px\r\n   height: 600px\r\nTIPO de arquivo - WEBP\r\nMáx tamanho do arquivo - 200kb\r\nTamanho preferencialmente - 50kb\r\nOBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
+            "instructions": "Layout do Figma:\r\n   width: 600px\r\n   height: 600px\r\nTIPO de arquivo - WEBP\r\nMáx tamanho do arquivo - 200kb\r\nTamanho preferencialmente - 50kb\r\nOBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -53,15 +53,14 @@
                 "class": "",
                 "id": ""
             },
-            "hide_admin": 0,
             "crop_type": "aspect_ratio",
             "aspect_ratio_width": 600,
             "aspect_ratio_height": 600,
             "return_format": "array",
             "preview_size": "medium",
             "library": "all",
-            "min_width": 300,
-            "min_height": 300,
+            "min_width": 599,
+            "min_height": 599,
             "min_size": "",
             "max_width": 600,
             "max_height": 600,
@@ -74,7 +73,7 @@
             "name": "img_colab_2",
             "aria-label": "",
             "type": "image_aspect_ratio_crop",
-            "instructions": "Layout do Figma:\r\n   width: 300px\r\n   height: 300px\r\nRETINA (preferencialmente)\r\n   width: 600px\r\n   height: 600px\r\nTIPO de arquivo - WEBP\r\nMáx tamanho do arquivo - 200kb\r\nTamanho preferencialmente - 50kb\r\nOBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
+            "instructions": "Layout do Figma:\r\n   width: 600px\r\n   height: 600px\r\nTIPO de arquivo - WEBP\r\nMáx tamanho do arquivo - 200kb\r\nTamanho preferencialmente - 50kb\r\nOBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA Mídia, ele irá converter a imagem automaticamente em webp",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -82,18 +81,17 @@
                 "class": "",
                 "id": ""
             },
-            "hide_admin": 0,
             "crop_type": "aspect_ratio",
             "aspect_ratio_width": 600,
             "aspect_ratio_height": 600,
             "return_format": "array",
             "preview_size": "medium",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
+            "min_width": 599,
+            "min_height": 599,
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
+            "max_width": 600,
+            "max_height": 600,
             "max_size": ".2",
             "mime_types": "webp"
         }
@@ -124,7 +122,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1678466070,
+    "modified": 1678732930,
     "acfe_categories": {
         "post-type": "POST TYPE"
     }

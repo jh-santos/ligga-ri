@@ -50,9 +50,6 @@ acf_add_local_field_group(array(
 			'aria-label' => '',
 			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Layout do Figma:
-	 width: 300px
-	 height: 300px
-RETINA (preferencialmente)
 	 width: 600px
 	 height: 600px
 TIPO de arquivo - WEBP
@@ -66,15 +63,14 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 				'class' => '',
 				'id' => '',
 			),
-			'hide_admin' => 0,
 			'crop_type' => 'aspect_ratio',
 			'aspect_ratio_width' => 600,
 			'aspect_ratio_height' => 600,
 			'return_format' => 'array',
 			'preview_size' => 'medium',
 			'library' => 'all',
-			'min_width' => 300,
-			'min_height' => 300,
+			'min_width' => 599,
+			'min_height' => 599,
 			'min_size' => '',
 			'max_width' => 600,
 			'max_height' => 600,
@@ -88,9 +84,6 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 			'aria-label' => '',
 			'type' => 'image_aspect_ratio_crop',
 			'instructions' => 'Layout do Figma:
-	 width: 300px
-	 height: 300px
-RETINA (preferencialmente)
 	 width: 600px
 	 height: 600px
 TIPO de arquivo - WEBP
@@ -104,18 +97,17 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 				'class' => '',
 				'id' => '',
 			),
-			'hide_admin' => 0,
 			'crop_type' => 'aspect_ratio',
 			'aspect_ratio_width' => 600,
 			'aspect_ratio_height' => 600,
 			'return_format' => 'array',
 			'preview_size' => 'medium',
 			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
+			'min_width' => 599,
+			'min_height' => 599,
 			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
+			'max_width' => 600,
+			'max_height' => 600,
 			'max_size' => '.2',
 			'mime_types' => 'webp',
 		),
@@ -149,7 +141,7 @@ OBS: para otimizar a imagem, utilize o conversão automatica do wordpress na ABA
 	'acfe_categories' => array(
 		'post-type' => 'POST TYPE',
 	),
-	'modified' => 1678466070,
+	'modified' => 1678732930,
 ));
 
 endif;
