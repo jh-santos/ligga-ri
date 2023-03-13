@@ -5,7 +5,7 @@
             <div class='col-md-6 px-md-3 mx-auto'>
                 <div class="grupo grupo-1">
                     <?php $modulo_02_1 = get_field('modulo_02_1'); ?>
-                    <?php $term = get_term_by('id', $modulo_02_1, 'cat_doc_1'); ?>
+                    <?php $term = get_term_by('id', $modulo_02_1, 'categoria'); ?>
                     <a href="<?php echo esc_url(get_term_link($term)); ?>"></a>
                     <h2 class="titulo f-800"><?php echo esc_html($term->name); ?></h2>
                     <div class="grupo-lista">
@@ -13,7 +13,7 @@
                             'post_type' => 'documentos',
                             'tax_query' => array(
                                 array(
-                                    'taxonomy' => 'cat_doc_1',
+                                    'taxonomy' => 'categoria',
                                     'field' => 'slug',
                                     'terms' => $term->slug,
                                     'post_per_page' => 5,
@@ -46,7 +46,7 @@
             <div class='col-md-6 px-md-3'>
                 <div class="grupo grupo-2 px-md-0">
                     <?php $modulo_02_2 = get_field('modulo_02_2'); ?>
-                    <?php $term = get_term_by('id', $modulo_02_2, 'cat_doc_1'); ?>
+                    <?php $term = get_term_by('id', $modulo_02_2, 'categoria'); ?>
                     <a href="<?php echo esc_url(get_term_link($term)); ?>"></a>
                     <h2 class="titulo f-800"><?php echo esc_html($term->name); ?></h2>
                     <div class="grupo-lista">
@@ -54,7 +54,7 @@
                             'post_type' => 'documentos',
                             'tax_query' => array(
                                 array(
-                                    'taxonomy' => 'cat_doc_1',
+                                    'taxonomy' => 'categoria',
                                     'field' => 'slug',
                                     'terms' => $term->slug,
                                     'post_per_page' => 5,

@@ -39,7 +39,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'hide_admin' => 0,
-			'taxonomy' => 'cat_doc_1',
+			'taxonomy' => 'categoria',
 			'add_term' => 0,
 			'save_terms' => 0,
 			'load_terms' => 0,
@@ -66,7 +66,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'hide_admin' => 0,
-			'taxonomy' => 'cat_doc_1',
+			'taxonomy' => 'categoria',
 			'add_term' => 0,
 			'save_terms' => 0,
 			'load_terms' => 0,
@@ -320,7 +320,7 @@ OBS: para otimizar a imagem, utilize o conversão automática do wordpress na AB
 	'acfe_categories' => array(
 		'pagina' => 'PAGINA',
 	),
-	'modified' => 1678473471,
+	'modified' => 1678727500,
 ));
 
 endif;
