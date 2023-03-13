@@ -288,6 +288,12 @@
             height: 16px;
         }
     }
+    .menu-top {
+        .grupo-1 {
+            display: flex;
+            align-items: center;
+        }
+    }
     .menu-central {
         position: absolute;
         z-index: 10;
